@@ -1,0 +1,70 @@
+/*!
+Theme Name: HPNA
+Theme URI: https://redcartstudios.com/
+Author: Anthony Skelton
+Author URI: https://anthonyskelton.com
+Description: WordPress Theme Hollywood Park Neighborhood Association - Child of Twenty Twenty
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: hpna
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+HPNA is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Tailwind Base
+# Tailwind Plugins
+# Site Variables and Mixins
+# Accessibility
+# Site Components
+# Tailwind Utilities
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Tailwind base styles - includes normalize.css
+--------------------------------------------------------------*/
+@tailwind base;
+
+/*--------------------------------------------------------------
+# Tailwind plugins - included in tailwind.config.js
+--------------------------------------------------------------*/
+@tailwind components;
+
+/*--------------------------------------------------------------
+# Site Variables and Mixins
+--------------------------------------------------------------*/
+//@import "variables-site/variables-site";
+//@import "mixins/mixins-master";
+//@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+//@import "modules/accessibility";
+
+
+/*--------------------------------------------------------------
+# Site Components
+--------------------------------------------------------------*/
+@import "elements";
+
+@import "components/legacy";
+//@import "layout";
+//@import "components";
+//@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Tailwind Utilities - generated from config in tailwind.js
+--------------------------------------------------------------*/
+@tailwind utilities;
+
