@@ -29,3 +29,5 @@ function hpna_block_editor_styles() {
 }
 
 add_action( 'enqueue_block_editor_assets', 'hpna_block_editor_styles', 2, 1 );
+
+include_once( 'inc/index.php' );
