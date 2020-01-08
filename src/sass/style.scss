@@ -5,6 +5,7 @@ Author: Anthony Skelton
 Author URI: https://anthonyskelton.com
 Description: WordPress Theme Hollywood Park Neighborhood Association - Child of Twenty Twenty
 Version: 1.0.0
+Template: twentytwenty
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: hpna
@@ -57,8 +58,8 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 # Site Components
 --------------------------------------------------------------*/
 @import "elements";
+@import "components";
 
-@import "components/legacy";
 //@import "layout";
 //@import "components";
 //@import "navigation/navigation";

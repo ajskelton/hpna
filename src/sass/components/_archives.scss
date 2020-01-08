@@ -1,0 +1,12 @@
+.archive-header {
+  @apply py-8;
+  background-color: rgba( 113, 158, 64, 0.2 );
+
+  @screen md {
+    @apply py-16;
+  }
+}
+
+.archive-title {
+  @apply uppercase font-thin;
+}

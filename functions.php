@@ -15,3 +15,17 @@ function twenty_twenty_child_enqueue_styles() {
 /*
  * Your code goes below
  */
+
+/**
+ * Enqueue supplemental block editor styles.
+ */
+function hpna_block_editor_styles() {
+	
+	$css_dependencies = array();
+	
+	// Dequeue the Block Styles from Parent Theme, Enqueue the custom editor styles.
+	wp_dequeue_style( 'twentytwenty-block-editor-styles' );
+	wp_enqueue_style( 'hpna-block-editor-styles', get_theme_file_uri( '/dist/css/editor.css' ), $css_dependencies, wp_get_theme()->get( 'Version' ), 'all' );
+}
+
+add_action( 'enqueue_block_editor_assets', 'hpna_block_editor_styles', 2, 1 );
