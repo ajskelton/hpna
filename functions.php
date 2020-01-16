@@ -31,3 +31,9 @@ function hpna_block_editor_styles() {
 add_action( 'enqueue_block_editor_assets', 'hpna_block_editor_styles', 2, 1 );
 
 include_once( 'inc/index.php' );
+
+
+add_action( 'init', 'hpna_remove_parent_actions');
+function hpna_remove_parent_actions() {
+	remove_action( 'wp_enqueue_scripts', 'twentytwenty_register_styles' );
+}

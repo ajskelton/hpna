@@ -9,8 +9,8 @@ module.exports = {
 		},
 		extend: {
 			colors: {
-				red: '#C0272D',
-				dark: '#303030',
+				green: '#719E40',
+				olive: '#5F6324',
 			},
 			maxWidth: {
 				'7xl': '80rem',

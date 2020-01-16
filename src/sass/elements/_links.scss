@@ -1,0 +1,9 @@
+a {
+  @apply text-green;
+
+  &:hover,
+  &:focus,
+  &:visited {
+    @apply text-olive;
+  }
+}
