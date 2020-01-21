@@ -1,0 +1,74 @@
+/* Font Families ----------------------------- */
+.entry-content p,
+.entry-content ol,
+.entry-content ul,
+.entry-content dl,
+.entry-content dt {
+  font-family: $base-font-family;
+  letter-spacing: normal;
+}
+
+.entry-content cite,
+.entry-content figcaption,
+.entry-content .wp-caption-text {
+  font-family: $base-font-family;
+}
+
+@supports ( font-variation-settings: normal ) {
+
+  .entry-content cite,
+  .entry-content figcaption,
+  .entry-content .wp-caption-text {
+    font-family: $base-font-family;
+  }
+}
+
+/* Headings --------------------------------- */
+
+h1 {
+  @apply text-5xl font-semibold uppercase text-olive;
+}
+
+h2 {
+  @apply text-4xl font-semibold text-green;
+}
+
+h3 {
+  @apply text-3xl font-semibold uppercase text-olive;
+}
+
+h4 {
+  @apply text-2xl font-semibold text-olive;
+}
+
+h5 {
+  @apply text-xl text-gray-700;
+}
+
+h6 {
+  @apply text-base uppercase;
+}
+
+p {
+  @apply text-xl mb-4;
+}
+
+pre {
+  @apply text-xl;
+}
+
+ol, ul {
+  @apply text-xl;
+}
+
+table {
+  @apply text-xl;
+}
+
+blockquote {
+  @apply border-green;
+}
+
+.wp-block-pullquote::before {
+  @apply text-green;
+}

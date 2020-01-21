@@ -44,7 +44,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 /*--------------------------------------------------------------
 # Site Variables and Mixins
 --------------------------------------------------------------*/
-//@import "variables-site/variables-site";
+@import "variables-site";
 //@import "mixins/mixins-master";
 //@import "typography/typography";
 
@@ -59,6 +59,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 --------------------------------------------------------------*/
 @import "elements";
 @import "components";
+@import "blocks";
 
 //@import "layout";
 //@import "components";

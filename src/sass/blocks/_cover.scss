@@ -1,0 +1,16 @@
+.wp-block-cover.is-style-page-title {
+  @apply text-olive font-normal py-4 mb-12;
+  min-height: 150px;
+
+  h1 {
+    @apply text-olive font-normal relative;
+
+    &:after {
+      @apply absolute h-2 border-t-2 border-lightGreen w-48;
+      content: '';
+      bottom: -1.5rem;
+      left: 50%;
+      transform: translateX( -50% );
+    }
+  }
+}

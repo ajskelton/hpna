@@ -1,5 +1,41 @@
 .primary-menu {
+
+  > li {
+    @apply mt-0 ml-2;
+  }
+
   a {
     @apply text-olive;
+  }
+}
+
+ul.primary-menu {
+  @apply text-xl;
+}
+
+.footer-widgets-outer-wrapper {
+  @apply py-16 border-0;
+}
+
+.footer-nav-widgets-wrapper .menu-footer-menu-container {
+
+  .menu {
+    @apply flex justify-end;
+
+    li {
+      @apply ml-0;
+
+      a {
+        @apply border-r border-r-2 border-white pr-4;
+      }
+
+      &:last-of-type {
+        @apply mr-0;
+
+        a {
+          @apply pr-0 border-0;
+        }
+      }
+    }
   }
 }

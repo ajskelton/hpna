@@ -1,5 +1,7 @@
 html {
 	box-sizing: border-box;
+	font-family: $base-font-family;
+	font-size: 100%;
 }
 
 *,
@@ -33,6 +35,10 @@ figure {
 
 section {
 	outline: none;
+}
+
+p {
+	font-family: $base-font-family;
 }
 
 @import "tables";
