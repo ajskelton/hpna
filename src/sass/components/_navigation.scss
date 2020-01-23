@@ -2,15 +2,89 @@
 
   > li {
     @apply mt-0 ml-2;
+
+    @screen lg {
+      @apply ml-4;
+    }
+
+    @screen xl {
+      @apply ml-8;
+    }
+
+    &.menu-item-has-children > a {
+      @apply pr-5;
+    }
+
+    > .icon {
+      top: calc( 50% - 0.5rem);
+
+      &:before {
+        height: 0.7rem;
+      }
+      &:after {
+        width: 0.7rem;
+      }
+    }
   }
 
-  a {
+  li.current-menu-item {
+    a {
+      text-decoration: none;
+
+      &:after {
+        background-color: $greenLight;
+        width: 70%;
+        height: 2px;
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -0.5rem;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  > li > a {
     @apply text-olive;
+
+    &:after {
+      background-color: $greenLight;
+      width: 0;
+      height: 2px;
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -0.5rem;
+      transform: translateX(-50%);
+      transition: width 300ms ease-in-out;
+    }
+
+    &:hover {
+      @apply no-underline;
+
+      &:after {
+        width: 70%;
+      }
+    }
+  }
+
+  ul {
+    @apply text-lg;
+  }
+
+  ul.sub-menu {
+    li a:after {
+      display: none;
+    }
   }
 }
 
 ul.primary-menu {
-  @apply text-xl;
+  @apply text-lg m-0;
+
+  @screen xl {
+    @apply text-xl;
+  }
 }
 
 .footer-widgets-outer-wrapper {

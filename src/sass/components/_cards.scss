@@ -1,0 +1,42 @@
+.c-card {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.c-card__wrapper {
+  display: grid;
+  grid-template-rows: 240px 200px;
+}
+
+.c-card__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @screen lg {
+    padding: 0 2.5rem;
+  }
+}
+
+.c-card__bottom {
+  background: $green;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0 0 25px 25px;
+
+  @screen lg {
+    padding: 2.5rem;
+  }
+
+
+  p {
+    @apply font-bold text-center text-3xl;
+
+    @screen lg {
+      @apply text-4xl;
+    }
+  }
+}

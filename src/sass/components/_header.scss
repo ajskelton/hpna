@@ -1,3 +1,35 @@
 .header-titles-wrapper {
   @apply mr-0;
 }
+
+.header-inner {
+  @apply py-4;
+
+  @screen md {
+    @apply py-8;
+  }
+
+  .toggle {
+    @apply p-0;
+  }
+}
+
+body:not(.enable-search-modal) .header-titles-wrapper {
+  @apply justify-between;
+}
+
+.header-titles-wrapper {
+  @apply px-0 justify-between;
+}
+
+.nav-toggle {
+  @apply w-16 relative;
+}
+.header-titles {
+  @apply m-0;
+}
+.header-titles .site-logo {
+  @screen md {
+    @apply m-0;
+  }
+}
