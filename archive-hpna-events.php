@@ -18,7 +18,8 @@ get_header();
 ?>
 
 <main id="site-content" role="main">
-
+    <div class="post-inner">
+    <div class="entry-content">
 	<?php
 
 	$archive_title    = '';
@@ -55,15 +56,10 @@ get_header();
 	if ( $archive_title || $archive_subtitle ) {
 		?>
 
-		<header class="archive-header has-text-align-center header-footer-group">
-
-			<div class="archive-header-inner section-inner medium">
-
-                <h1 class="archive-title"><?php echo __( 'Upcoming Events', 'hpna' ); ?></h1>
-
-			</div><!-- .archive-header-inner -->
-
-		</header><!-- .archive-header -->
+        <div class="wp-block-cover alignfull has-green-background-color has-background-dim is-style-page-title"><div class="wp-block-cover__inner-container">
+                <h1 class="has-text-align-center">Upcoming <strong>Events</strong></h1>
+            </div>
+        </div>
 
 		<?php
 	}
@@ -102,7 +98,7 @@ get_header();
 	?>
 
 	<?php get_template_part( 'template-parts/pagination' ); ?>
-
+    </div></div>
 </main><!-- #site-content -->
 
 <?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
