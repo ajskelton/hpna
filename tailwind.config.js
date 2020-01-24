@@ -3,8 +3,8 @@ module.exports = {
 		screens: {
 			// xs: '400px',
 			sm: '640px',
-			md: '768px',
-			lg: '1024px',
+			md: '700px',
+			lg: '1000px',
 			xl: '1240px',
 		},
 		fontSize: {

@@ -1,3 +1,21 @@
 .entry-content > .alignfull {
   @apply my-0 py-8;
 }
+
+.entry-content hr,
+hr.styled-separator {
+  background: none;
+  background-color: $greenLight !important;
+  height: 0.2rem;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+}
+
+[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+  max-width: 96rem;
+  width: calc(100% - 4rem);
+}

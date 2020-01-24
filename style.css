@@ -639,15 +639,15 @@ video {
   }
 }
 
-@media (min-width: 768px){
+@media (min-width: 700px){
   .container{
-    max-width: 768px;
+    max-width: 700px;
   }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1000px){
   .container{
-    max-width: 1024px;
+    max-width: 1000px;
   }
 }
 
@@ -906,12 +906,6 @@ table {
   margin-top: 0;
 }
 
-[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
-.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-  max-width: 96rem;
-  width: calc(100% - 4rem);
-}
-
 #site-header {
   z-index: 100;
 }
@@ -941,7 +935,7 @@ table {
   background-color: rgba(113, 158, 64, 0.2);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .archive-header {
     padding-top: 4rem;
     padding-bottom: 4rem;
@@ -962,7 +956,7 @@ table {
   padding-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .header-inner {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -994,7 +988,7 @@ body:not(.enable-search-modal) .header-titles-wrapper {
   margin: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .header-titles .site-logo {
     margin: 0;
   }
@@ -1005,7 +999,7 @@ body:not(.enable-search-modal) .header-titles-wrapper {
   margin-left: 0.5rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   .primary-menu > li {
     margin-left: 1rem;
   }
@@ -1114,7 +1108,7 @@ ul.primary-menu {
   background-color: rgba(113, 158, 64, 0.2);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   #site-footer {
     padding-top: 3rem;
     padding-bottom: 3rem;
@@ -1176,6 +1170,25 @@ ul.primary-menu {
   padding-bottom: 2rem;
 }
 
+.entry-content hr,
+hr.styled-separator {
+  background: none;
+  background-color: #66CC33 !important;
+  height: 0.2rem;
+}
+
+.entry-content hr:before, .entry-content hr:after,
+  hr.styled-separator:before,
+  hr.styled-separator:after {
+  display: none;
+}
+
+[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+  max-width: 96rem;
+  width: calc(100% - 4rem);
+}
+
 .bg-leaf-pattern {
   background-color: rgba(113, 158, 64, 0.2);
   position: relative;
@@ -1215,7 +1228,7 @@ ul.primary-menu {
       align-items: center;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   .c-card__top {
     padding: 0 2.5rem;
   }
@@ -1234,7 +1247,7 @@ ul.primary-menu {
   border-radius: 0 0 25px 25px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   .c-card__bottom {
     padding: 2.5rem;
   }
@@ -1246,7 +1259,7 @@ ul.primary-menu {
   font-size: 3rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
   .c-card__bottom p {
     font-size: 3.6rem;
   }
@@ -1258,7 +1271,7 @@ ul.primary-menu {
   grid-gap: 2.4rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .entry-content__event {
     grid-template-columns: 12rem 1fr;
     grid-gap: 4rem;
@@ -1330,6 +1343,49 @@ ul.primary-menu {
   bottom: -1.5rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/* Block: Separator  ------------------------- */
+
+hr.wp-block-separator,
+.entry-content > hr.wp-block-separator {
+  margin: 3rem auto;
+  max-width: 40rem;
+}
+
+@media (min-width: 700px) {
+  hr.wp-block-separator,
+  .entry-content > hr.wp-block-separator {
+    margin: 5rem auto;
+    max-width: 71.5rem;
+    width: calc( 100vw - 8rem);
+  }
+}
+
+/* STYLE: WIDE */
+
+.wp-block-separator.is-style-wide {
+  position: relative;
+  width: 100%;
+}
+
+/* STYLE: DOTS */
+
+.wp-block-separator.is-style-dots::before {
+  background: none;
+  color: inherit;
+  font-size: 3.2rem;
+  font-weight: 700;
+  height: auto;
+  letter-spacing: 1em;
+  padding-left: 1em;
+  position: static;
+  transform: none;
+  width: auto;
+}
+
+.wp-block-separator.is-style-dots::after {
+  content: none;
 }
 
 /*--------------------------------------------------------------
@@ -17802,7 +17858,7 @@ ul.primary-menu {
   }
 }
 
-@media (min-width: 768px){
+@media (min-width: 700px){
   .md\:sr-only{
     position: absolute;
     width: 1px;
@@ -26028,7 +26084,7 @@ ul.primary-menu {
   }
 }
 
-@media (min-width: 1024px){
+@media (min-width: 1000px){
   .lg\:sr-only{
     position: absolute;
     width: 1px;

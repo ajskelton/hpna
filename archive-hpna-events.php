@@ -71,7 +71,7 @@ get_header();
 		while ( have_posts() ) {
 			$i++;
 			if ( $i > 1 ) {
-				echo '<hr class="post-separator styled-separator is-style-wide section-inner" aria-hidden="true" />';
+				echo '<hr class="wp-block-separator is-style-wide" aria-hidden="true" />';
 			}
 			the_post();
 

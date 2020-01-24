@@ -20,7 +20,7 @@ $location = get_field( 'location' );
 
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<article <?php post_class('alignwide' ); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="post-inner">
 		

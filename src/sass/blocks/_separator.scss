@@ -1,0 +1,39 @@
+/* Block: Separator  ------------------------- */
+
+hr.wp-block-separator,
+.entry-content > hr.wp-block-separator {
+  margin: 3rem auto;
+  max-width: 40rem;
+
+  @screen md {
+    margin: 5rem auto;
+    max-width: 71.5rem;
+    width: calc( 100vw - 8rem );
+  }
+}
+
+/* STYLE: WIDE */
+
+.wp-block-separator.is-style-wide {
+  position: relative;
+  width: 100%;
+}
+
+/* STYLE: DOTS */
+
+.wp-block-separator.is-style-dots::before {
+  background: none;
+  color: inherit;
+  font-size: 3.2rem;
+  font-weight: 700;
+  height: auto;
+  letter-spacing: 1em;
+  padding-left: 1em;
+  position: static;
+  transform: none;
+  width: auto;
+}
+
+.wp-block-separator.is-style-dots::after {
+  content: none;
+}
