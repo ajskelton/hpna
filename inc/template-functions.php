@@ -21,3 +21,36 @@ if ( ! function_exists( 'hpna_load_inline_svg' ) ) :
 		return '';
 	}
 endif;
+
+add_action( 'pre_get_posts', 'hpna_events_pre_get_posts' );
+/**
+ * Updates the HPNA Events Archive Query
+ *
+ * Shows future events in chronological order
+ *
+ * @param $query
+ *
+ * @return mixed
+ */
+function hpna_events_pre_get_posts( $query ) {
+	
+	if ( is_admin() ) {
+		return $query;
+	}
+	
+	if ( isset( $query->query_vars['post_type']) && $query->query_vars['post_type'] === 'hpna-events' && $query->is_main_query() ) {
+		
+		$query->set('orderby', 'meta_value');
+		$query->set('order', 'ASC');
+		$query->set( 'meta_query', array(
+			array(
+				'key' => 'date',
+				'value' => date('Ymd'),
+				'compare' => '>='
+			)
+		));
+		
+	}
+	
+	return $query;
+}
