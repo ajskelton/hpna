@@ -10,21 +10,6 @@
     @screen xl {
       @apply ml-8;
     }
-
-    &.menu-item-has-children > a {
-      @apply pr-5;
-    }
-
-    > .icon {
-      top: calc( 50% - 0.5rem);
-
-      &:before {
-        height: 0.7rem;
-      }
-      &:after {
-        width: 0.7rem;
-      }
-    }
   }
 
   li.current-menu-item {

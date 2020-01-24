@@ -729,56 +729,56 @@ body {
 /* Headings --------------------------------- */
 
 h1 {
-  font-size: 3rem;
+  font-size: 4.8rem;
   font-weight: 600;
   text-transform: uppercase;
   color: #5F6324;
 }
 
 h2 {
-  font-size: 2.25rem;
+  font-size: 3.6rem;
   font-weight: 600;
   color: #719E40;
 }
 
 h3 {
-  font-size: 1.875rem;
+  font-size: 3rem;
   font-weight: 600;
   text-transform: uppercase;
   color: #5F6324;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   font-weight: 600;
   color: #5F6324;
 }
 
 h5 {
-  font-size: 1.25rem;
+  font-size: 2rem;
   color: #4a5568;
 }
 
 h6 {
-  font-size: 1rem;
+  font-size: 1.6rem;
   text-transform: uppercase;
 }
 
 p {
-  font-size: 1.25rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 pre {
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 
 ol, ul {
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 
 table {
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 
 blockquote {
@@ -792,7 +792,6 @@ blockquote {
 html {
   box-sizing: border-box;
   font-family: "Libre Franklin", sans-serif;
-  font-size: 100%;
 }
 
 *,
@@ -1018,22 +1017,6 @@ body:not(.enable-search-modal) .header-titles-wrapper {
   }
 }
 
-.primary-menu > li.menu-item-has-children > a {
-  padding-right: 1.25rem;
-}
-
-.primary-menu > li > .icon {
-  top: calc( 50% - 0.5rem);
-}
-
-.primary-menu > li > .icon:before {
-  height: 0.7rem;
-}
-
-.primary-menu > li > .icon:after {
-  width: 0.7rem;
-}
-
 .primary-menu li.current-menu-item a {
   text-decoration: none;
 }
@@ -1074,7 +1057,7 @@ body:not(.enable-search-modal) .header-titles-wrapper {
 }
 
 .primary-menu ul {
-  font-size: 1.125rem;
+  font-size: 1.8rem;
 }
 
 .primary-menu ul.sub-menu li a:after {
@@ -1082,13 +1065,13 @@ body:not(.enable-search-modal) .header-titles-wrapper {
 }
 
 ul.primary-menu {
-  font-size: 1.125rem;
+  font-size: 1.8rem;
   margin: 0;
 }
 
 @media (min-width: 1240px) {
   ul.primary-menu {
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 }
 
@@ -1183,7 +1166,7 @@ ul.primary-menu {
 }
 
 .entry-content .has-larger-font-size {
-  font-size: 2.25rem;
+  font-size: 3.6rem;
 }
 
 .entry-content > .alignfull {
@@ -1260,12 +1243,12 @@ ul.primary-menu {
 .c-card__bottom p {
   font-weight: 700;
   text-align: center;
-  font-size: 1.875rem;
+  font-size: 3rem;
 }
 
 @media (min-width: 1024px) {
   .c-card__bottom p {
-    font-size: 2.25rem;
+    font-size: 3.6rem;
   }
 }
 
@@ -9084,43 +9067,43 @@ ul.primary-menu {
 }
 
 .text-xs{
-  font-size: 0.75rem;
+  font-size: 1.2rem;
 }
 
 .text-sm{
-  font-size: 0.875rem;
+  font-size: 1.4rem;
 }
 
 .text-base{
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 .text-lg{
-  font-size: 1.125rem;
+  font-size: 1.8rem;
 }
 
 .text-xl{
-  font-size: 1.25rem;
+  font-size: 2rem;
 }
 
 .text-2xl{
-  font-size: 1.5rem;
+  font-size: 2.4rem;
 }
 
 .text-3xl{
-  font-size: 1.875rem;
-}
-
-.text-4xl{
-  font-size: 2.25rem;
-}
-
-.text-5xl{
   font-size: 3rem;
 }
 
+.text-4xl{
+  font-size: 3.6rem;
+}
+
+.text-5xl{
+  font-size: 4.8rem;
+}
+
 .text-6xl{
-  font-size: 4rem;
+  font-size: 6.4rem;
 }
 
 .italic{
@@ -9270,6 +9253,14 @@ ul.primary-menu {
 }
 
 .invisible{
+  visibility: hidden;
+}
+
+.group:hover .group-hover\:visible{
+  visibility: visible;
+}
+
+.group:hover .group-hover\:invisible{
   visibility: hidden;
 }
 
@@ -17317,43 +17308,43 @@ ul.primary-menu {
   }
 
   .sm\:text-xs{
-    font-size: 0.75rem;
+    font-size: 1.2rem;
   }
 
   .sm\:text-sm{
-    font-size: 0.875rem;
+    font-size: 1.4rem;
   }
 
   .sm\:text-base{
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 
   .sm\:text-lg{
-    font-size: 1.125rem;
+    font-size: 1.8rem;
   }
 
   .sm\:text-xl{
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 
   .sm\:text-2xl{
-    font-size: 1.5rem;
+    font-size: 2.4rem;
   }
 
   .sm\:text-3xl{
-    font-size: 1.875rem;
-  }
-
-  .sm\:text-4xl{
-    font-size: 2.25rem;
-  }
-
-  .sm\:text-5xl{
     font-size: 3rem;
   }
 
+  .sm\:text-4xl{
+    font-size: 3.6rem;
+  }
+
+  .sm\:text-5xl{
+    font-size: 4.8rem;
+  }
+
   .sm\:text-6xl{
-    font-size: 4rem;
+    font-size: 6.4rem;
   }
 
   .sm\:italic{
@@ -17496,14 +17487,6 @@ ul.primary-menu {
 
   .sm\:align-text-bottom{
     vertical-align: text-bottom;
-  }
-
-  .sm\:visible{
-    visibility: visible;
-  }
-
-  .sm\:invisible{
-    visibility: hidden;
   }
 
   .sm\:whitespace-normal{
@@ -25551,43 +25534,43 @@ ul.primary-menu {
   }
 
   .md\:text-xs{
-    font-size: 0.75rem;
+    font-size: 1.2rem;
   }
 
   .md\:text-sm{
-    font-size: 0.875rem;
+    font-size: 1.4rem;
   }
 
   .md\:text-base{
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 
   .md\:text-lg{
-    font-size: 1.125rem;
+    font-size: 1.8rem;
   }
 
   .md\:text-xl{
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 
   .md\:text-2xl{
-    font-size: 1.5rem;
+    font-size: 2.4rem;
   }
 
   .md\:text-3xl{
-    font-size: 1.875rem;
-  }
-
-  .md\:text-4xl{
-    font-size: 2.25rem;
-  }
-
-  .md\:text-5xl{
     font-size: 3rem;
   }
 
+  .md\:text-4xl{
+    font-size: 3.6rem;
+  }
+
+  .md\:text-5xl{
+    font-size: 4.8rem;
+  }
+
   .md\:text-6xl{
-    font-size: 4rem;
+    font-size: 6.4rem;
   }
 
   .md\:italic{
@@ -25730,14 +25713,6 @@ ul.primary-menu {
 
   .md\:align-text-bottom{
     vertical-align: text-bottom;
-  }
-
-  .md\:visible{
-    visibility: visible;
-  }
-
-  .md\:invisible{
-    visibility: hidden;
   }
 
   .md\:whitespace-normal{
@@ -33785,43 +33760,43 @@ ul.primary-menu {
   }
 
   .lg\:text-xs{
-    font-size: 0.75rem;
+    font-size: 1.2rem;
   }
 
   .lg\:text-sm{
-    font-size: 0.875rem;
+    font-size: 1.4rem;
   }
 
   .lg\:text-base{
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 
   .lg\:text-lg{
-    font-size: 1.125rem;
+    font-size: 1.8rem;
   }
 
   .lg\:text-xl{
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 
   .lg\:text-2xl{
-    font-size: 1.5rem;
+    font-size: 2.4rem;
   }
 
   .lg\:text-3xl{
-    font-size: 1.875rem;
-  }
-
-  .lg\:text-4xl{
-    font-size: 2.25rem;
-  }
-
-  .lg\:text-5xl{
     font-size: 3rem;
   }
 
+  .lg\:text-4xl{
+    font-size: 3.6rem;
+  }
+
+  .lg\:text-5xl{
+    font-size: 4.8rem;
+  }
+
   .lg\:text-6xl{
-    font-size: 4rem;
+    font-size: 6.4rem;
   }
 
   .lg\:italic{
@@ -33964,14 +33939,6 @@ ul.primary-menu {
 
   .lg\:align-text-bottom{
     vertical-align: text-bottom;
-  }
-
-  .lg\:visible{
-    visibility: visible;
-  }
-
-  .lg\:invisible{
-    visibility: hidden;
   }
 
   .lg\:whitespace-normal{
@@ -42019,43 +41986,43 @@ ul.primary-menu {
   }
 
   .xl\:text-xs{
-    font-size: 0.75rem;
+    font-size: 1.2rem;
   }
 
   .xl\:text-sm{
-    font-size: 0.875rem;
+    font-size: 1.4rem;
   }
 
   .xl\:text-base{
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 
   .xl\:text-lg{
-    font-size: 1.125rem;
+    font-size: 1.8rem;
   }
 
   .xl\:text-xl{
-    font-size: 1.25rem;
+    font-size: 2rem;
   }
 
   .xl\:text-2xl{
-    font-size: 1.5rem;
+    font-size: 2.4rem;
   }
 
   .xl\:text-3xl{
-    font-size: 1.875rem;
-  }
-
-  .xl\:text-4xl{
-    font-size: 2.25rem;
-  }
-
-  .xl\:text-5xl{
     font-size: 3rem;
   }
 
+  .xl\:text-4xl{
+    font-size: 3.6rem;
+  }
+
+  .xl\:text-5xl{
+    font-size: 4.8rem;
+  }
+
   .xl\:text-6xl{
-    font-size: 4rem;
+    font-size: 6.4rem;
   }
 
   .xl\:italic{
@@ -42198,14 +42165,6 @@ ul.primary-menu {
 
   .xl\:align-text-bottom{
     vertical-align: text-bottom;
-  }
-
-  .xl\:visible{
-    visibility: visible;
-  }
-
-  .xl\:invisible{
-    visibility: hidden;
   }
 
   .xl\:whitespace-normal{
