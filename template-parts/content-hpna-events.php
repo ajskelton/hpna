@@ -23,23 +23,26 @@ $location = get_field( 'location' );
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<div class="post-inner">
-
-		<div class="flex items-start" >
-            
-            <div class="date w-24 h-24 rounded-full p-6 flex justify-center align-center flex-col bg-green uppercase text-white text-center">
-                <p class="m-0"><?php echo $date->format('M'); ?></p>
-                <p class="m-0"><?php echo $date->format('j'); ?></p>
-            </div>
-            
-            <div class="entry flex-grow">
-                <h2 class="mt-0 lg:mt-0"><?php the_title(); ?></h2>
-                <p class="mt-0"><?php echo $date->format( 'l, F j' ); ?> | <?php echo $start_time; ?> &ndash; <?php echo $end_time; ?></p>
-                <p class="location"><?php echo esc_html( $location ); ?></p>
-                <?php the_content(); ?>
-            </div>
-
+		
+		<div class="entry-content__event">
 			
-
+			<div class="entry-content__event-date-wrapper">
+				<div class="entry-content__event-date">
+					<p class="entry-content__event-date--month"><?php echo $date->format( 'M' ); ?></p>
+					<p class="entry-content__event-date--day"><?php echo $date->format( 'j' ); ?></p>
+				</div>
+			</div>
+			
+			<div class="entry-content_event-text-wrapper">
+				<div class="entry-content__event-text">
+					<h2 class="mt-0 lg:mt-0"><?php the_title(); ?></h2>
+					<p class="mt-0"><?php echo $date->format( 'l, F j' ); ?> | <?php echo $start_time; ?>
+						&ndash; <?php echo $end_time; ?></p>
+					<p class="location"><?php echo esc_html( $location ); ?></p>
+					<?php the_content(); ?>
+				</div>
+			</div>
+		
 		</div><!-- .entry-content -->
 
 	</div><!-- .post-inner -->

@@ -1,0 +1,28 @@
+.entry-content__event {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2.4rem;
+
+  @screen md {
+    grid-template-columns: 12rem 1fr;
+    grid-gap: 4rem;
+  }
+  .entry-content__event-date-wrapper {
+    justify-self: center;
+  }
+  .entry-content__event-date {
+    @apply w-48 h-48 bg-green p-4 rounded-full text-white flex flex-col items-center justify-center;
+  }
+
+  .entry-content__event-date--month {
+    @apply font-bold text-2xl uppercase m-0 leading-none;
+  }
+
+  .entry-content__event-date--day {
+    @apply font-light text-4xl m-0 leading-none;
+  }
+
+  h2 {
+    @apply mt-0;
+  }
+}

@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Libre+Franklin:400,600&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,600&display=swap);
 /*!
 Theme Name: HPNA
 Theme URI: https://redcartstudios.com/
@@ -908,7 +908,7 @@ table {
 
 [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-  max-width: 80rem;
+  max-width: 96rem;
   width: calc(100% - 4rem);
 }
 
@@ -1250,6 +1250,59 @@ ul.primary-menu {
   .c-card__bottom p {
     font-size: 3.6rem;
   }
+}
+
+.entry-content__event {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2.4rem;
+}
+
+@media (min-width: 768px) {
+  .entry-content__event {
+    grid-template-columns: 12rem 1fr;
+    grid-gap: 4rem;
+  }
+}
+
+.entry-content__event .entry-content__event-date-wrapper {
+  justify-self: center;
+}
+
+.entry-content__event .entry-content__event-date {
+  width: 12rem;
+  height: 12rem;
+  background-color: #719E40;
+  padding: 1rem;
+  border-radius: 9999px;
+  color: #fff;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.entry-content__event .entry-content__event-date--month {
+  font-weight: 700;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+}
+
+.entry-content__event .entry-content__event-date--day {
+  font-weight: 300;
+  font-size: 3.6rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.entry-content__event h2 {
+  margin-top: 0;
 }
 
 .wp-block-cover.is-style-page-title {
