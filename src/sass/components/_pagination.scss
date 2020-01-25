@@ -1,0 +1,70 @@
+.pagination {
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .prev,
+  .next {
+
+    @screen md {
+      @apply bg-green text-white px-6 py-2 rounded-lg text-lg;
+    }
+
+    &.disabled {
+      @apply opacity-50 cursor-not-allowed;
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+      @apply no-underline;
+    }
+  }
+
+  .prev {
+    @apply mr-4;
+  }
+  .next {
+    @apply ml-16;
+
+    @screen lg {
+      @apply ml-4;
+    }
+  }
+
+  .page-numbers:not(.prev):not(.next):not(.dots) {
+    @apply relative block;
+
+    &:after {
+      display: block;
+      background-color: $greenLight;
+      width: 0;
+      height: 2px;
+      content: '';
+      left: 50%;
+      bottom: -0.5rem;
+      transform: translateX(-25%);
+      transition: width 200ms ease-in-out;
+    }
+
+    &:hover {
+      @apply no-underline;
+
+      &:after {
+        width: 200%;
+      }
+    }
+
+    &:focus,
+    &:active {
+      @apply no-underline;
+    }
+
+    &.current {
+      &:after {
+        width: 200%;
+      }
+    }
+  }
+}

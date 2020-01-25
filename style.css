@@ -954,6 +954,7 @@ table {
 .header-inner {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  max-width: 124rem;
 }
 
 @media (min-width: 700px) {
@@ -1189,6 +1190,123 @@ hr.styled-separator {
   width: calc(100% - 4rem);
 }
 
+h2.entry-title {
+  font-size: 2.4rem;
+  color: #505050;
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 700px) {
+  h2.entry-title {
+    font-size: 3rem;
+  }
+}
+
+/*
+ * Sidebar layout
+ */
+
+.entry-content--sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 700px) {
+  .entry-content--sidebar {
+    grid-gap: 4rem 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .entry-content--sidebar {
+    grid-template-columns: 1fr 6fr 2fr 1fr;
+    grid-gap: 8rem 1rem;
+  }
+}
+
+@media (min-width: 1240px) {
+  .entry-content--sidebar {
+    grid-template-columns: 1fr 935px 295px 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .entry-content--sidebar .is-style-page-title {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1000px) {
+  .entry-content--sidebar .entry-content__posts {
+    grid-column: 2 / 3;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .entry-content--sidebar .entry-content__sidebar {
+    grid-column: 3 / 4;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .entry-content--sidebar .pagination-wrapper {
+    grid-column: 2 / 4;
+  }
+}
+
+.entry-content__posts {
+  width: calc( 100% - 4rem) !important;
+}
+
+@media (min-width: 1000px) {
+  .entry-content__posts {
+    width: calc(100% - 8rem) !important;
+    margin-left: 0;
+  }
+}
+
+.entry-content__posts .section-inner {
+  width: 100%;
+}
+
+.entry-content__posts .post-meta-wrapper {
+  margin: 2rem 0 0 0;
+}
+
+.entry-content__posts .post-meta {
+  margin: 0;
+}
+
+.entry-content__posts .post-meta li {
+  margin-top: 0;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 0;
+  padding-right: 1rem;
+  border-style: solid;
+  border-width: 0;
+  border-right-width: 1px;
+  border-color: #505050;
+}
+
+.entry-content__posts .post-meta li:last-of-type {
+  border-style: none;
+}
+
+.entry-content__posts .featured-media {
+  margin-top: 2rem;
+}
+
+.blog .wp-block-cover.is-style-page-title {
+  margin: 0;
+}
+
 .bg-leaf-pattern {
   background-color: rgba(113, 158, 64, 0.2);
   position: relative;
@@ -1316,6 +1434,91 @@ hr.styled-separator {
 
 .entry-content__event h2 {
   margin-top: 0;
+}
+
+.widget .widget-title {
+  font-size: 2rem;
+  color: #505050;
+  text-transform: capitalize;
+}
+
+.pagination .nav-links {
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+@media (min-width: 700px) {
+  .pagination .prev,
+  .pagination .next {
+    background-color: #719E40;
+    color: #fff;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.8rem;
+  }
+}
+
+.pagination .prev.disabled,
+.pagination .next.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination .prev:active, .pagination .prev:focus, .pagination .prev:hover,
+.pagination .next:active,
+.pagination .next:focus,
+.pagination .next:hover {
+  text-decoration: none;
+}
+
+.pagination .prev {
+  margin-right: 1rem;
+}
+
+.pagination .next {
+  margin-left: 4rem;
+}
+
+@media (min-width: 1000px) {
+  .pagination .next {
+    margin-left: 1rem;
+  }
+}
+
+.pagination .page-numbers:not(.prev):not(.next):not(.dots) {
+  position: relative;
+  display: block;
+}
+
+.pagination .page-numbers:not(.prev):not(.next):not(.dots):after {
+  display: block;
+  background-color: #66CC33;
+  width: 0;
+  height: 2px;
+  content: '';
+  left: 50%;
+  bottom: -0.5rem;
+  transform: translateX(-25%);
+  transition: width 200ms ease-in-out;
+}
+
+.pagination .page-numbers:not(.prev):not(.next):not(.dots):hover {
+  text-decoration: none;
+}
+
+.pagination .page-numbers:not(.prev):not(.next):not(.dots):hover:after {
+  width: 200%;
+}
+
+.pagination .page-numbers:not(.prev):not(.next):not(.dots):focus, .pagination .page-numbers:not(.prev):not(.next):not(.dots):active {
+  text-decoration: none;
+}
+
+.pagination .page-numbers:not(.prev):not(.next):not(.dots).current:after {
+  width: 200%;
 }
 
 .wp-block-cover.is-style-page-title {
@@ -1804,6 +2007,10 @@ hr.wp-block-separator,
   background-color: #5F6324;
 }
 
+.bg-grayDark{
+  background-color: #505050;
+}
+
 .hover\:bg-transparent:hover{
   background-color: transparent;
 }
@@ -2152,6 +2359,10 @@ hr.wp-block-separator,
   background-color: #5F6324;
 }
 
+.hover\:bg-grayDark:hover{
+  background-color: #505050;
+}
+
 .focus\:bg-transparent:focus{
   background-color: transparent;
 }
@@ -2498,6 +2709,10 @@ hr.wp-block-separator,
 
 .focus\:bg-olive:focus{
   background-color: #5F6324;
+}
+
+.focus\:bg-grayDark:focus{
+  background-color: #505050;
 }
 
 .bg-bottom{
@@ -2928,6 +3143,10 @@ hr.wp-block-separator,
   border-color: #5F6324;
 }
 
+.border-grayDark{
+  border-color: #505050;
+}
+
 .hover\:border-transparent:hover{
   border-color: transparent;
 }
@@ -3276,6 +3495,10 @@ hr.wp-block-separator,
   border-color: #5F6324;
 }
 
+.hover\:border-grayDark:hover{
+  border-color: #505050;
+}
+
 .focus\:border-transparent:focus{
   border-color: transparent;
 }
@@ -3622,6 +3845,10 @@ hr.wp-block-separator,
 
 .focus\:border-olive:focus{
   border-color: #5F6324;
+}
+
+.focus\:border-grayDark:focus{
+  border-color: #505050;
 }
 
 .rounded-none{
@@ -7196,6 +7423,14 @@ hr.wp-block-separator,
   color: #5F6324;
 }
 
+.placeholder-grayDark:-ms-input-placeholder{
+  color: #505050;
+}
+
+.placeholder-grayDark::placeholder{
+  color: #505050;
+}
+
 .focus\:placeholder-transparent:focus:-ms-input-placeholder{
   color: transparent;
 }
@@ -7892,6 +8127,14 @@ hr.wp-block-separator,
   color: #5F6324;
 }
 
+.focus\:placeholder-grayDark:focus:-ms-input-placeholder{
+  color: #505050;
+}
+
+.focus\:placeholder-grayDark:focus::placeholder{
+  color: #505050;
+}
+
 .pointer-events-none{
   pointer-events: none;
 }
@@ -8479,6 +8722,10 @@ hr.wp-block-separator,
   color: #5F6324;
 }
 
+.text-grayDark{
+  color: #505050;
+}
+
 .hover\:text-transparent:hover{
   color: transparent;
 }
@@ -8827,6 +9074,10 @@ hr.wp-block-separator,
   color: #5F6324;
 }
 
+.hover\:text-grayDark:hover{
+  color: #505050;
+}
+
 .focus\:text-transparent:focus{
   color: transparent;
 }
@@ -9173,6 +9424,10 @@ hr.wp-block-separator,
 
 .focus\:text-olive:focus{
   color: #5F6324;
+}
+
+.focus\:text-grayDark:focus{
+  color: #505050;
 }
 
 .text-xs{
@@ -10045,6 +10300,10 @@ hr.wp-block-separator,
     background-color: #5F6324;
   }
 
+  .sm\:bg-grayDark{
+    background-color: #505050;
+  }
+
   .sm\:hover\:bg-transparent:hover{
     background-color: transparent;
   }
@@ -10393,6 +10652,10 @@ hr.wp-block-separator,
     background-color: #5F6324;
   }
 
+  .sm\:hover\:bg-grayDark:hover{
+    background-color: #505050;
+  }
+
   .sm\:focus\:bg-transparent:focus{
     background-color: transparent;
   }
@@ -10739,6 +11002,10 @@ hr.wp-block-separator,
 
   .sm\:focus\:bg-olive:focus{
     background-color: #5F6324;
+  }
+
+  .sm\:focus\:bg-grayDark:focus{
+    background-color: #505050;
   }
 
   .sm\:bg-bottom{
@@ -11169,6 +11436,10 @@ hr.wp-block-separator,
     border-color: #5F6324;
   }
 
+  .sm\:border-grayDark{
+    border-color: #505050;
+  }
+
   .sm\:hover\:border-transparent:hover{
     border-color: transparent;
   }
@@ -11517,6 +11788,10 @@ hr.wp-block-separator,
     border-color: #5F6324;
   }
 
+  .sm\:hover\:border-grayDark:hover{
+    border-color: #505050;
+  }
+
   .sm\:focus\:border-transparent:focus{
     border-color: transparent;
   }
@@ -11863,6 +12138,10 @@ hr.wp-block-separator,
 
   .sm\:focus\:border-olive:focus{
     border-color: #5F6324;
+  }
+
+  .sm\:focus\:border-grayDark:focus{
+    border-color: #505050;
   }
 
   .sm\:rounded-none{
@@ -15437,6 +15716,14 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .sm\:placeholder-grayDark:-ms-input-placeholder{
+    color: #505050;
+  }
+
+  .sm\:placeholder-grayDark::placeholder{
+    color: #505050;
+  }
+
   .sm\:focus\:placeholder-transparent:focus:-ms-input-placeholder{
     color: transparent;
   }
@@ -16133,6 +16420,14 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .sm\:focus\:placeholder-grayDark:focus:-ms-input-placeholder{
+    color: #505050;
+  }
+
+  .sm\:focus\:placeholder-grayDark:focus::placeholder{
+    color: #505050;
+  }
+
   .sm\:pointer-events-none{
     pointer-events: none;
   }
@@ -16720,6 +17015,10 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .sm\:text-grayDark{
+    color: #505050;
+  }
+
   .sm\:hover\:text-transparent:hover{
     color: transparent;
   }
@@ -17068,6 +17367,10 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .sm\:hover\:text-grayDark:hover{
+    color: #505050;
+  }
+
   .sm\:focus\:text-transparent:focus{
     color: transparent;
   }
@@ -17414,6 +17717,10 @@ hr.wp-block-separator,
 
   .sm\:focus\:text-olive:focus{
     color: #5F6324;
+  }
+
+  .sm\:focus\:text-grayDark:focus{
+    color: #505050;
   }
 
   .sm\:text-xs{
@@ -18271,6 +18578,10 @@ hr.wp-block-separator,
     background-color: #5F6324;
   }
 
+  .md\:bg-grayDark{
+    background-color: #505050;
+  }
+
   .md\:hover\:bg-transparent:hover{
     background-color: transparent;
   }
@@ -18619,6 +18930,10 @@ hr.wp-block-separator,
     background-color: #5F6324;
   }
 
+  .md\:hover\:bg-grayDark:hover{
+    background-color: #505050;
+  }
+
   .md\:focus\:bg-transparent:focus{
     background-color: transparent;
   }
@@ -18965,6 +19280,10 @@ hr.wp-block-separator,
 
   .md\:focus\:bg-olive:focus{
     background-color: #5F6324;
+  }
+
+  .md\:focus\:bg-grayDark:focus{
+    background-color: #505050;
   }
 
   .md\:bg-bottom{
@@ -19395,6 +19714,10 @@ hr.wp-block-separator,
     border-color: #5F6324;
   }
 
+  .md\:border-grayDark{
+    border-color: #505050;
+  }
+
   .md\:hover\:border-transparent:hover{
     border-color: transparent;
   }
@@ -19743,6 +20066,10 @@ hr.wp-block-separator,
     border-color: #5F6324;
   }
 
+  .md\:hover\:border-grayDark:hover{
+    border-color: #505050;
+  }
+
   .md\:focus\:border-transparent:focus{
     border-color: transparent;
   }
@@ -20089,6 +20416,10 @@ hr.wp-block-separator,
 
   .md\:focus\:border-olive:focus{
     border-color: #5F6324;
+  }
+
+  .md\:focus\:border-grayDark:focus{
+    border-color: #505050;
   }
 
   .md\:rounded-none{
@@ -23663,6 +23994,14 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .md\:placeholder-grayDark:-ms-input-placeholder{
+    color: #505050;
+  }
+
+  .md\:placeholder-grayDark::placeholder{
+    color: #505050;
+  }
+
   .md\:focus\:placeholder-transparent:focus:-ms-input-placeholder{
     color: transparent;
   }
@@ -24359,6 +24698,14 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .md\:focus\:placeholder-grayDark:focus:-ms-input-placeholder{
+    color: #505050;
+  }
+
+  .md\:focus\:placeholder-grayDark:focus::placeholder{
+    color: #505050;
+  }
+
   .md\:pointer-events-none{
     pointer-events: none;
   }
@@ -24946,6 +25293,10 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .md\:text-grayDark{
+    color: #505050;
+  }
+
   .md\:hover\:text-transparent:hover{
     color: transparent;
   }
@@ -25294,6 +25645,10 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .md\:hover\:text-grayDark:hover{
+    color: #505050;
+  }
+
   .md\:focus\:text-transparent:focus{
     color: transparent;
   }
@@ -25640,6 +25995,10 @@ hr.wp-block-separator,
 
   .md\:focus\:text-olive:focus{
     color: #5F6324;
+  }
+
+  .md\:focus\:text-grayDark:focus{
+    color: #505050;
   }
 
   .md\:text-xs{
@@ -26497,6 +26856,10 @@ hr.wp-block-separator,
     background-color: #5F6324;
   }
 
+  .lg\:bg-grayDark{
+    background-color: #505050;
+  }
+
   .lg\:hover\:bg-transparent:hover{
     background-color: transparent;
   }
@@ -26845,6 +27208,10 @@ hr.wp-block-separator,
     background-color: #5F6324;
   }
 
+  .lg\:hover\:bg-grayDark:hover{
+    background-color: #505050;
+  }
+
   .lg\:focus\:bg-transparent:focus{
     background-color: transparent;
   }
@@ -27191,6 +27558,10 @@ hr.wp-block-separator,
 
   .lg\:focus\:bg-olive:focus{
     background-color: #5F6324;
+  }
+
+  .lg\:focus\:bg-grayDark:focus{
+    background-color: #505050;
   }
 
   .lg\:bg-bottom{
@@ -27621,6 +27992,10 @@ hr.wp-block-separator,
     border-color: #5F6324;
   }
 
+  .lg\:border-grayDark{
+    border-color: #505050;
+  }
+
   .lg\:hover\:border-transparent:hover{
     border-color: transparent;
   }
@@ -27969,6 +28344,10 @@ hr.wp-block-separator,
     border-color: #5F6324;
   }
 
+  .lg\:hover\:border-grayDark:hover{
+    border-color: #505050;
+  }
+
   .lg\:focus\:border-transparent:focus{
     border-color: transparent;
   }
@@ -28315,6 +28694,10 @@ hr.wp-block-separator,
 
   .lg\:focus\:border-olive:focus{
     border-color: #5F6324;
+  }
+
+  .lg\:focus\:border-grayDark:focus{
+    border-color: #505050;
   }
 
   .lg\:rounded-none{
@@ -31889,6 +32272,14 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .lg\:placeholder-grayDark:-ms-input-placeholder{
+    color: #505050;
+  }
+
+  .lg\:placeholder-grayDark::placeholder{
+    color: #505050;
+  }
+
   .lg\:focus\:placeholder-transparent:focus:-ms-input-placeholder{
     color: transparent;
   }
@@ -32585,6 +32976,14 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .lg\:focus\:placeholder-grayDark:focus:-ms-input-placeholder{
+    color: #505050;
+  }
+
+  .lg\:focus\:placeholder-grayDark:focus::placeholder{
+    color: #505050;
+  }
+
   .lg\:pointer-events-none{
     pointer-events: none;
   }
@@ -33172,6 +33571,10 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .lg\:text-grayDark{
+    color: #505050;
+  }
+
   .lg\:hover\:text-transparent:hover{
     color: transparent;
   }
@@ -33520,6 +33923,10 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .lg\:hover\:text-grayDark:hover{
+    color: #505050;
+  }
+
   .lg\:focus\:text-transparent:focus{
     color: transparent;
   }
@@ -33866,6 +34273,10 @@ hr.wp-block-separator,
 
   .lg\:focus\:text-olive:focus{
     color: #5F6324;
+  }
+
+  .lg\:focus\:text-grayDark:focus{
+    color: #505050;
   }
 
   .lg\:text-xs{
@@ -34723,6 +35134,10 @@ hr.wp-block-separator,
     background-color: #5F6324;
   }
 
+  .xl\:bg-grayDark{
+    background-color: #505050;
+  }
+
   .xl\:hover\:bg-transparent:hover{
     background-color: transparent;
   }
@@ -35071,6 +35486,10 @@ hr.wp-block-separator,
     background-color: #5F6324;
   }
 
+  .xl\:hover\:bg-grayDark:hover{
+    background-color: #505050;
+  }
+
   .xl\:focus\:bg-transparent:focus{
     background-color: transparent;
   }
@@ -35417,6 +35836,10 @@ hr.wp-block-separator,
 
   .xl\:focus\:bg-olive:focus{
     background-color: #5F6324;
+  }
+
+  .xl\:focus\:bg-grayDark:focus{
+    background-color: #505050;
   }
 
   .xl\:bg-bottom{
@@ -35847,6 +36270,10 @@ hr.wp-block-separator,
     border-color: #5F6324;
   }
 
+  .xl\:border-grayDark{
+    border-color: #505050;
+  }
+
   .xl\:hover\:border-transparent:hover{
     border-color: transparent;
   }
@@ -36195,6 +36622,10 @@ hr.wp-block-separator,
     border-color: #5F6324;
   }
 
+  .xl\:hover\:border-grayDark:hover{
+    border-color: #505050;
+  }
+
   .xl\:focus\:border-transparent:focus{
     border-color: transparent;
   }
@@ -36541,6 +36972,10 @@ hr.wp-block-separator,
 
   .xl\:focus\:border-olive:focus{
     border-color: #5F6324;
+  }
+
+  .xl\:focus\:border-grayDark:focus{
+    border-color: #505050;
   }
 
   .xl\:rounded-none{
@@ -40115,6 +40550,14 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .xl\:placeholder-grayDark:-ms-input-placeholder{
+    color: #505050;
+  }
+
+  .xl\:placeholder-grayDark::placeholder{
+    color: #505050;
+  }
+
   .xl\:focus\:placeholder-transparent:focus:-ms-input-placeholder{
     color: transparent;
   }
@@ -40811,6 +41254,14 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .xl\:focus\:placeholder-grayDark:focus:-ms-input-placeholder{
+    color: #505050;
+  }
+
+  .xl\:focus\:placeholder-grayDark:focus::placeholder{
+    color: #505050;
+  }
+
   .xl\:pointer-events-none{
     pointer-events: none;
   }
@@ -41398,6 +41849,10 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .xl\:text-grayDark{
+    color: #505050;
+  }
+
   .xl\:hover\:text-transparent:hover{
     color: transparent;
   }
@@ -41746,6 +42201,10 @@ hr.wp-block-separator,
     color: #5F6324;
   }
 
+  .xl\:hover\:text-grayDark:hover{
+    color: #505050;
+  }
+
   .xl\:focus\:text-transparent:focus{
     color: transparent;
   }
@@ -42092,6 +42551,10 @@ hr.wp-block-separator,
 
   .xl\:focus\:text-olive:focus{
     color: #5F6324;
+  }
+
+  .xl\:focus\:text-grayDark:focus{
+    color: #505050;
   }
 
   .xl\:text-xs{

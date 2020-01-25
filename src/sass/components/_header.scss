@@ -5,6 +5,8 @@
 .header-inner {
   @apply py-4;
 
+  max-width: 124rem;
+
   @screen md {
     @apply py-8;
   }

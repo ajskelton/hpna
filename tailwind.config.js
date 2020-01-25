@@ -24,6 +24,7 @@ module.exports = {
 				lightGreen: '#66CC33',
 				green: '#719E40',
 				olive: '#5F6324',
+				grayDark: '#505050',
 			},
 			maxWidth: {
 				'7xl': '80rem',
