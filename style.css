@@ -1568,6 +1568,13 @@ h2.entry-title {
   color: #719E40;
 }
 
+.color-accent,
+.color-accent-hover:focus,
+.color-accent-hover:hover {
+  color: #5F6324;
+  font-weight: 700;
+}
+
 .wp-block-cover.is-style-page-title {
   color: #5F6324;
   font-weight: 400;
