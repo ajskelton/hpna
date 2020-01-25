@@ -54,3 +54,14 @@ function hpna_events_pre_get_posts( $query ) {
 	
 	return $query;
 }
+
+function get_the_category_slugs() {
+	$categories = get_the_category();
+	$category_slugs = array();
+	
+	foreach ( $categories as $category ) {
+		$category_slugs[] = $category->slug;
+	}
+	
+	return $category_slugs;
+}

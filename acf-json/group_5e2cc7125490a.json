@@ -1,0 +1,48 @@
+{
+    "key": "group_5e2cc7125490a",
+    "title": "Meeting Minutes",
+    "fields": [
+        {
+            "key": "field_5e2cc7219c15e",
+            "label": "Minutes",
+            "name": "minutes",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            },
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:minutes"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1579992890
+}

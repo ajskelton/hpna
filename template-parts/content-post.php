@@ -30,7 +30,11 @@
 		<div class="entry-content__post">
 
 			<?php
-			if ( ! is_singular()  ) {
+			$categories = get_the_category_slugs();
+			
+			if ( ! is_singular() && in_array('minutes', $categories, true ) ) {
+				get_template_part( 'template-parts/content', 'post-minutes' );
+			} else if ( ! is_singular()  ) {
 				the_excerpt();
 			} else {
 				the_content( __( 'Continue reading', 'twentytwenty' ) );
