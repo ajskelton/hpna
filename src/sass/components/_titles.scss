@@ -1,3 +1,10 @@
+.entry-title {
+  a {
+    @apply text-grayDark;
+  }
+}
+
+
 .widget .widget-title {
   @apply text-xl text-grayDark capitalize;
 }

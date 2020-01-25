@@ -1,0 +1,16 @@
+.post-date a,
+.post-author a {
+  @apply text-grayDark;
+
+  &:hover,
+  &:focus,
+  &:visited,
+  &:active {
+    @apply text-grayDark;
+  }
+}
+
+.post-categories a,
+.post-tags a {
+  @apply text-green;
+}

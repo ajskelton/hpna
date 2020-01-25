@@ -14,6 +14,19 @@ hr.styled-separator {
   }
 }
 
+.entry-content .post-separator {
+  width: 80%;
+  max-width: 53rem;
+
+  @screen lg {
+    margin: 6rem auto;
+  }
+
+  @screen xl {
+    margin: 8rem auto;
+  }
+}
+
 [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
   max-width: 96rem;
