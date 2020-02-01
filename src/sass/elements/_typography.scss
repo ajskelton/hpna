@@ -26,7 +26,11 @@
 /* Headings --------------------------------- */
 
 h1 {
-  @apply text-5xl font-semibold uppercase text-olive;
+  @apply text-3xl font-semibold uppercase text-olive;
+
+  @screen md {
+    @apply text-5xl;
+  }
 }
 
 h2 {

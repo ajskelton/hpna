@@ -65,3 +65,40 @@ function get_the_category_slugs() {
 	
 	return $category_slugs;
 }
+
+add_action( 'pre_get_posts', 'hpna_build_news_feed' );
+function hpna_build_news_feed( WP_Query $query ) {
+	if ( is_home() && $query->is_main_query() ) {
+		$query->set( 'post_type', array(
+			'post',
+			'hpna-meeting-minutes',
+			'hpna-money-reports',
+			'hpna-newsletters'
+		));
+	}
+}
+
+add_filter( 'the_title', 'hpna_custom_titles', 20, 2 );
+function hpna_custom_titles( $title, $id ) {
+	
+	$post_type = get_post_type( $id );
+	
+	switch( $post_type ) {
+		
+		case 'hpna-meeting-minutes':
+			$title = '<strong>Meeting Minutes</strong>: ' . $title;
+			break;
+			
+		case 'hpna-money-reports':
+			$title = '<strong>Financial Report</strong>: ' . $title;
+			break;
+			
+		case 'hpna-newsletters':
+			$title = '<strong>Newsletter</strong>: ' . $title;
+			break;
+	}
+	
+	
+	return $title;
+	
+}

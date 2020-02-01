@@ -35,3 +35,11 @@ body:not(.enable-search-modal) .header-titles-wrapper {
     @apply m-0;
   }
 }
+
+.singular .entry-header {
+  @apply p-0;
+}
+
+.entry-header .alignfull {
+  @apply mt-0;
+}
