@@ -904,6 +904,14 @@ table {
   width: 100%;
 }
 
+input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="month"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="week"], input[type="number"], input[type="search"], input[type="tel"], input[type="color"], textarea, select {
+  border-color: #719E40;
+  border-width: 2px;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+}
+
 .post-inner {
   padding: 0;
 }
@@ -1564,6 +1572,18 @@ h2.entry-title {
   width: 200%;
 }
 
+.btn,
+button,
+input[type=submit] {
+  background-color: #719E40;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+}
+
 .post-date a,
 .post-author a {
   color: #505050;
@@ -1587,6 +1607,18 @@ h2.entry-title {
 .color-accent-hover:hover {
   color: #5F6324;
   font-weight: 700;
+}
+
+.btn,
+button,
+input[type=submit] {
+  background-color: #719E40;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
 }
 
 .wp-block-cover.is-style-page-title {

@@ -38,6 +38,10 @@ get_header();
                 ?>
 
             </div>
+            
+            <div class="entry-content__sidebar">
+                <?php get_sidebar( 'news' ); ?>
+            </div>
         </div>
     </div>
 	<?php
