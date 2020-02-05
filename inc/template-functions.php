@@ -81,6 +81,10 @@ function hpna_build_news_feed( WP_Query $query ) {
 add_filter( 'the_title', 'hpna_custom_titles', 20, 2 );
 function hpna_custom_titles( $title, $id ) {
 	
+	if ( is_admin() ) {
+		return $title;
+	}
+	
 	$post_type = get_post_type( $id );
 	
 	switch( $post_type ) {
