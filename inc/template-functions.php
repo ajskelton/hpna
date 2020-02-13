@@ -72,7 +72,7 @@ function hpna_build_news_feed( WP_Query $query ) {
 	if (
 		$query->is_main_query() &&
 		! is_post_type_archive( 'hpna-events' ) &&
-		( is_home() || is_archive() )
+		( is_home() )
 	) {
 		$query->set( 'post_type', array(
 			'post',
