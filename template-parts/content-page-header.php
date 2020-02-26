@@ -1,6 +1,6 @@
 <?php
 
-    if ( is_archive() ) {
+    if ( is_archive() && !$page_title ) {
         $page_title = get_the_archive_title();
     } else if ( is_search() ) {
         $page_title = '<strong>Search for:</strong> ' . get_search_query();
