@@ -16,9 +16,9 @@
                 "id": ""
             },
             "choices": {
-                "members": "Members",
-                "events": "Events",
-                "newsletter": "Newsletter"
+                "calendar-alt": "Calendar",
+                "newspaper": "Newspaper",
+                "users": "Users"
             },
             "default_value": [],
             "allow_null": 0,
@@ -80,5 +80,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1578502152
+    "modified": 1583857378
 }
