@@ -13,7 +13,7 @@ get_header();
 ?>
 <main id="site-content" role="main">
     <div class="post-inner">
-        <div class="entry-content entry-content--sidebar">
+        <div class="entry-content">
             <?php
             
             $page_title = get_the_title();
@@ -37,10 +37,6 @@ get_header();
                 
                 ?>
 
-            </div>
-            
-            <div class="entry-content__sidebar">
-                <?php get_sidebar( 'news' ); ?>
             </div>
         </div>
     </div>

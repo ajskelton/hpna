@@ -92,7 +92,14 @@ h2.entry-title {
   width: calc( 100% - 4rem) !important;
   @screen lg {
     width: calc(100% - 8rem) !important;
-    margin-left: 0;
+  }
+
+  .entry-header {
+    @apply mb-4;
+
+    @screen lg {
+      @apply mb-8;
+    }
   }
 
   .section-inner {
@@ -120,6 +127,32 @@ h2.entry-title {
   }
 }
 
+.hpna-meeting-minutes {
+  .post-inner--thumbnail-content {
+
+    @screen md {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      grid-gap: 4rem;
+    }
+  }
+
+  .entry-content__thumbnail {
+    max-width: 200px;
+    margin: 2rem auto 2rem 0;
+
+    @screen md {
+      margin: 0;
+      max-width: none;
+    }
+  }
+}
+
+
 .blog .wp-block-cover.is-style-page-title {
   margin: 0;
+}
+
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+  width: auto;
 }

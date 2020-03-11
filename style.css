@@ -699,6 +699,7 @@ video {
 body {
   background-color: #ffffff;
   font-family: "Libre Franklin", sans-serif;
+  color: #505050;
 }
 
 html {
@@ -1320,7 +1321,16 @@ h2.entry-title {
 @media (min-width: 1000px) {
   .entry-content__posts {
     width: calc(100% - 8rem) !important;
-    margin-left: 0;
+  }
+}
+
+.entry-content__posts .entry-header {
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1000px) {
+  .entry-content__posts .entry-header {
+    margin-bottom: 2rem;
   }
 }
 
@@ -1356,8 +1366,32 @@ h2.entry-title {
   margin-top: 2rem;
 }
 
+@media (min-width: 700px) {
+  .hpna-meeting-minutes .post-inner--thumbnail-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-gap: 4rem;
+  }
+}
+
+.hpna-meeting-minutes .entry-content__thumbnail {
+  max-width: 200px;
+  margin: 2rem auto 2rem 0;
+}
+
+@media (min-width: 700px) {
+  .hpna-meeting-minutes .entry-content__thumbnail {
+    margin: 0;
+    max-width: none;
+  }
+}
+
 .blog .wp-block-cover.is-style-page-title {
   margin: 0;
+}
+
+.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
+  width: auto;
 }
 
 .bg-leaf-pattern {

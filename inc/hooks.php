@@ -4,3 +4,55 @@ function add_fontawesome_kit() {
 	echo '<script src="https://kit.fontawesome.com/3cdb745b2a.js" crossorigin="anonymous"></script>';
 }
 add_action('wp_head', 'add_fontawesome_kit');
+
+function hpna_read_more_text( $more ) {
+	if ( is_single() ) {
+		return $more;
+	}
+
+	$more = sprintf(
+		' ... <a class="read-more" href="%1$s">%2$s</a>',
+		get_permalink( get_the_ID() ),
+		__( 'Read More &#187;', 'hpna' )
+	);
+	
+	return $more;
+}
+add_filter( 'excerpt_more', 'hpna_read_more_text' );
+
+function hpna_improved_excerpt_trim( $text ) {
+	global $post;
+	if ( '' !== $text ) {
+		return $text;
+	}
+	$text = get_the_content('');
+	$text = apply_filters('the_content', $text);
+	$text = str_replace('\]\]\>', ']]&gt;', $text);
+	$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
+	$text = strip_tags($text, '<p>');
+	$excerpt_length = 40;
+	$words = explode(' ', $text, $excerpt_length + 1);
+	if (count($words)> $excerpt_length) {
+		array_pop($words);
+		array_push($words, '[...]');
+		$text = implode(' ', $words);
+	}
+	return $text;
+}
+remove_filter( 'get_the_excerpt', 'wp_trim_excerpt');
+add_filter( 'get_the_excerpt', 'hpna_improved_excerpt_trim' );
+
+function hpna_meeting_minutes_excerpts( $string ) {
+	if ( is_single() ) {
+		return $string;
+	}
+	
+	if ( 'hpna-meeting-minutes' !== get_post_type() ) {
+		return $string;
+	}
+	
+	if ( is_home() || is_archive() ) {
+		return strip_tags( $string, '<p>,<a>' );
+	}
+}
+add_filter( 'the_content', 'hpna_meeting_minutes_excerpts' );
