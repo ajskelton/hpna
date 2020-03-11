@@ -54,7 +54,11 @@
   }
 
   ul {
-    @apply text-lg;
+    @apply text-lg bg-green text-white;
+
+    &:after {
+      border-bottom-color: $green;
+    }
   }
 
   ul.sub-menu {
