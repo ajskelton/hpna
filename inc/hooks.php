@@ -57,3 +57,8 @@ function hpna_meeting_minutes_excerpts( $string ) {
 	}
 }
 add_filter( 'the_content', 'hpna_meeting_minutes_excerpts' );
+
+function hpna_read_more_link( $more_link_element, $more_link_text ) {
+	return sprintf( '<a class="more-link" href="%s">Read More ...</a>', get_the_permalink() );
+}
+add_filter( 'the_content_more_link', 'hpna_read_more_link', 11, 2 );
