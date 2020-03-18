@@ -19,8 +19,9 @@ if ( is_singular() ) {
 
 	<div class="entry-header-inner section-inner">
         <?php
-
-		if ( is_singular() ) {
+        if ( 'hpna-newsletters' === get_post_type() ) {
+		    the_title( '<h2 class="entry-title"><a target="_blank" href="' . esc_url( get_field( 'newsletter' )['url'] ) . '">', '</a></h2>');
+        } elseif ( is_singular() ) {
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		} else {
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '">', '</a></h2>' );
@@ -52,8 +53,8 @@ if ( is_singular() ) {
 			<ul class="post-meta">
 				<li class="post-date meta-wrapper">
 					<span class="meta-text">
-							<a href="<?php the_permalink(); ?>"><?php the_time( get_option( 'date_format' ) ); ?></a>
-						</span>
+                        <?php the_time( get_option( 'date_format' ) ); ?>
+                    </span>
 				</li>
                 <li class="post-author meta-wrapper">
                     <span class="meta-text">
@@ -61,7 +62,7 @@ if ( is_singular() ) {
 							printf(
 							/* translators: %s: Author name */
 								__( 'By %s', 'twentytwenty' ),
-								'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author_meta( 'display_name' ) ) . '</a>'
+								'' . esc_html( get_the_author_meta( 'display_name' ) ) . ''
 							);
 							?>
 						</span>

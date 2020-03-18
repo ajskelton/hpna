@@ -15,8 +15,8 @@ get_header();
     <div class="post-inner">
         <div class="entry-content">
             <?php
-            
-            $page_title = get_the_title();
+
+            $page_title = 'Neighborhood <strong>News</strong>';
             
             include_once( 'template-parts/content-page-header.php' );
             

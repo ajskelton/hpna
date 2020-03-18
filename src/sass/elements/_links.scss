@@ -7,3 +7,27 @@ a {
     @apply text-olive;
   }
 }
+
+.has-green-background-color {
+  a {
+    @apply text-white font-bold;
+
+    &:hover,
+    &:focus,
+    &:visited {
+      @apply underline;
+    }
+  }
+}
+
+.has-orange-background-color {
+  a {
+    @apply text-white underline;
+
+    &:hover,
+    &:focus,
+    &:visited {
+      @apply underline;
+    }
+  }
+}

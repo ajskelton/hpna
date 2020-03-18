@@ -19,7 +19,7 @@ get_header();
 
     <main id="site-content" role="main">
         <div class="post-inner">
-            <div class="entry-content entry-content--sidebar">
+            <div class="entry-content">
 				<?php
 				
 				$page_title = 'Neighborhood <strong>News</strong>';
@@ -27,6 +27,9 @@ get_header();
 				include_once( 'template-parts/content-page-header.php' );
 				
 				?>
+                <div class="entry-content__sidebar">
+		            <?php get_sidebar( 'news' ); ?>
+                </div><!-- entry-content__sidebar -->
                 <div class="entry-content__posts">
 					
 					<?php
@@ -65,9 +68,7 @@ get_header();
 					?>
                 
                 </div><!-- .entry-content__posts -->
-                <div class="entry-content__sidebar">
-                    <?php get_sidebar( 'news' ); ?>
-                </div><!-- entry-content__sidebar -->
+                
 	            <?php get_template_part( 'template-parts/pagination' ); ?>
             </div><!-- entry-content--sidebar -->
 	       

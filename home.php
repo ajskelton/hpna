@@ -27,9 +27,13 @@ get_header();
 				include_once( 'template-parts/content-page-header.php' );
 				
 				?>
-                <div class="entry-content__sidebar">
-		            <?php get_sidebar( 'news' ); ?>
-                </div><!-- entry-content__sidebar -->
+                
+                <?php if( is_active_sidebar( 'news' ) ) : ?>
+                    <div class="entry-content__sidebar">
+                        <?php get_sidebar( 'news' ); ?>
+                    </div><!-- entry-content__sidebar -->
+                <?php endif; ?>
+                
                 <div class="entry-content__posts">
 					
 					<?php

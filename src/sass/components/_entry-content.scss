@@ -1,5 +1,10 @@
+.entry-content > * {
+  @apply px-8;
+}
+
 .entry-content > .alignfull {
   @apply my-0 py-8;
+
 }
 
 .entry-content hr,
@@ -89,7 +94,9 @@ h2.entry-title {
 }
 
 .entry-content__posts {
+  @apply mt-16;
   width: calc( 100% - 4rem) !important;
+
   @screen lg {
     width: calc(100% - 8rem) !important;
   }
@@ -155,4 +162,8 @@ h2.entry-title {
 
 .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
   width: auto;
+}
+
+.singular .featured-media-inner {
+  left: auto;
 }

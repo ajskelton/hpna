@@ -1,0 +1,21 @@
+.wp-block-group.button-row {
+
+  .wp-block-group__inner-container {
+    @apply flex justify-center flex-wrap;
+
+    .wp-block-button {
+      margin: 0 2rem 1rem 0 !important;
+      width: auto !important;
+
+      &:last-child {
+        margin-right: 0 !important;
+      }
+
+      a.wp-block-button__link {
+        border-radius: 10px;
+        text-transform: capitalize;
+        padding: 1rem 2rem;
+      }
+    }
+  }
+}

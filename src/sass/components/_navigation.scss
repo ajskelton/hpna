@@ -53,6 +53,8 @@
     }
   }
 
+
+
   ul {
     @apply text-lg bg-green text-white;
 
@@ -64,6 +66,20 @@
   ul.sub-menu {
     li a:after {
       display: none;
+    }
+  }
+
+  a:focus {
+    text-decoration: none;
+  }
+
+  .current_page_ancestor {
+    text-decoration: none;
+
+    a {
+      &:after {
+        width: 70%;
+      }
     }
   }
 }

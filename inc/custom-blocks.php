@@ -12,6 +12,16 @@ function register_acf_block_types() {
 		'icon'            => 'admin-comments',
 		'keywords'        => array( 'testimonial', 'quote' ),
 	) );
+	
+	acf_register_block_type( array(
+		'name'            => 'board-members',
+		'title'           => __( 'Board Memebers' ),
+		'description'     => __( 'Board Member Photos and Bios' ),
+		'render_callback' => 'hpna_acf_block_render_callback',
+		'category'        => 'formatting',
+		'icon'            => 'universal-access',
+		'keywords'        => array( 'board', 'members' ),
+	) );
 }
 
 // Check if function exists and hook into setup.

@@ -7,6 +7,11 @@ function hpna_color_palette_setup() {
 	// Editor Color Palette
 	add_theme_support( 'editor-color-palette', array(
 		array(
+			'name' => __( 'White', 'hpna'),
+			'slug' => 'white',
+			'color' => '#ffffff',
+		),
+		array(
 			'name'  => __( 'Green', 'hpna' ),
 			'slug'  => 'green',
 			'color'	=> '#719E40',
@@ -16,6 +21,11 @@ function hpna_color_palette_setup() {
 			'slug'  => 'olive',
 			'color' => '#5F6324',
 		),
+		array(
+			'name' => __( 'Burnt Orange', 'hpna'),
+			'slug' => 'orange',
+			'color' => '#df7706',
+		)
 	) );
 }
 add_action( 'after_setup_theme', 'hpna_color_palette_setup', 20 );
@@ -78,6 +88,10 @@ function hpna_register_block_styles() {
 	register_block_style( 'core/cover', array(
 		'name' => 'page-title',
 		'label' => __( 'Page Title' ),
+	));
+	register_block_style( 'core/cover', array(
+		'name' => 'info-bar',
+		'label' => __( 'Info Bar' ),
 	));
 }
 add_action( 'after_setup_theme', 'hpna_register_block_styles' );

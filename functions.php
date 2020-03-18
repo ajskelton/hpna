@@ -27,7 +27,6 @@ function hpna_block_editor_styles() {
 	wp_dequeue_style( 'twentytwenty-block-editor-styles' );
 	wp_enqueue_style( 'hpna-block-editor-styles', get_theme_file_uri( '/dist/css/editor.css' ), $css_dependencies, wp_get_theme()->get( 'Version' ), 'all' );
 }
-
 add_action( 'enqueue_block_editor_assets', 'hpna_block_editor_styles', 2, 1 );
 
 include_once( 'inc/index.php' );

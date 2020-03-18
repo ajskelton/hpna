@@ -1,0 +1,26 @@
+.hpna-board-members {
+
+}
+
+.hpna-board-members__member {
+  grid-template-columns: 1fr 7fr;
+  grid-gap: 3rem;
+  margin-bottom: 2rem;
+
+  @screen lg {
+    display: grid;
+
+    grid-template-columns: 1fr 7fr;
+  }
+}
+
+.hpna-board-members__member-photo {}
+
+.hpna-board-members__member-content{}
+
+.hpna-board-members__name-and-title {
+  @apply font-bold;
+}
+
+.hpna-board-members__bio {}
+

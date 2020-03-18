@@ -1,0 +1,35 @@
+/* ------------------------------------------- */
+
+/*	Twenty Twenty Editor Styles — Block Editor
+/* ------------------------------------------- */
+
+.editor-styles-wrapper {
+  color: #000;
+  letter-spacing: -0.015em;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+.editor-styles-wrapper > * {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+@supports ( font-variation-settings: normal ) {
+
+  .editor-styles-wrapper > * {
+    font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  }
+
+}
+
+.block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.block-editor-block-list__empty-block-inserter .block-editor-inserter__toggle:not(:hover):not(:focus),
+.block-editor-default-block-appender .block-editor-inserter .block-editor-inserter__toggle:not(:hover):not(:focus) {
+  color: inherit;
+}
