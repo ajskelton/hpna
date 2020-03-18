@@ -134,7 +134,8 @@ h2.entry-title {
   }
 }
 
-.hpna-meeting-minutes {
+.hpna-meeting-minutes,
+.hpna-money-reports {
   .post-inner--thumbnail-content {
 
     @screen md {
@@ -166,4 +167,5 @@ h2.entry-title {
 
 .singular .featured-media-inner {
   left: auto;
+  width: auto;
 }

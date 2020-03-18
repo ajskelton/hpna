@@ -12,19 +12,31 @@
 get_header();
 ?>
 <main id="site-content" role="main">
-	<?php
-	
-	if ( have_posts() ) {
+    <div class="post-inner">
+	    <div class="entry-content">
+		    <?php
 		
-		while ( have_posts() ) {
-			the_post();
+		    $page_title = 'Neighborhood <strong>News</strong>';
+		
+		    include_once( 'template-parts/content-page-header.php' );
+		
+		    ?>
+
+			<?php
 			
-			get_template_part( 'template-parts/content', get_post_type() );
+			if ( have_posts() ) {
+				
+				while ( have_posts() ) {
+					the_post();
+					
+					get_template_part( 'template-parts/content', get_post_type() );
+					
+				}
+			}
 			
-		}
-	}
-	
-	?>
+			?>
+	    </div>
+    </div>
 </main><!-- #site-content -->
 
 <?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
