@@ -9,7 +9,8 @@ function twenty_twenty_child_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'child-style',
         get_stylesheet_directory_uri() . '/style.css',
-        array('parent-style')
+        array('parent-style'),
+        '20200409-0815'
     );
 }
 /*
@@ -37,27 +38,3 @@ function hpna_remove_parent_actions() {
 	remove_action( 'wp_enqueue_scripts', 'twentytwenty_register_styles' );
 }
 
-function hpna_widgets_init() {
-	
-	// Define sidebars.
-	$sidebars = array(
-		'sidebar-3' => esc_html__( 'News Sidebar', 'hpna' ),
-	);
-	
-	// Loop through each sidebar and register.
-	foreach ( $sidebars as $sidebar_id => $sidebar_name ) {
-		register_sidebar(
-			array(
-				'name'          => $sidebar_name,
-				'id'            => $sidebar_id,
-				'description'   => /* translators: the sidebar name */ sprintf( esc_html__( 'Widget area for %s', 'hpna' ), $sidebar_name ),
-				'before_widget' => '<aside class="widget %2$s">',
-				'after_widget'  => '</aside>',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			)
-		);
-	}
-	
-}
-add_action( 'widgets_init', 'hpna_widgets_init' );

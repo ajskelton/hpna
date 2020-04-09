@@ -98,6 +98,7 @@ h2.entry-title {
   width: calc( 100% - 4rem) !important;
 
   @screen lg {
+    @apply mt-32;
     width: calc(100% - 8rem) !important;
   }
 

@@ -2,8 +2,9 @@
   @apply text-olive font-normal py-4 mb-12;
   min-height: 150px;
 
-  h1 {
-    @apply text-olive font-normal relative;
+  h1,
+  .page-title {
+    @apply text-olive font-normal relative leading-tight tracking-tighter;
 
     &:after {
       @apply absolute h-2 border-t-2 border-lightGreen w-48;

@@ -807,7 +807,7 @@ table {
 
 /* Headings --------------------------------- */
 
-h1 {
+h1, .h1 {
   font-size: 3rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -815,36 +815,36 @@ h1 {
 }
 
 @media (min-width: 700px) {
-  h1 {
+  h1, .h1 {
     font-size: 4.8rem;
   }
 }
 
-h2 {
+h2, .h2 {
   font-size: 3.6rem;
   font-weight: 600;
   color: #719E40;
 }
 
-h3 {
+h3, .h3 {
   font-size: 3rem;
   font-weight: 600;
   text-transform: uppercase;
   color: #5F6324;
 }
 
-h4 {
+h4, .h4 {
   font-size: 2.4rem;
   font-weight: 600;
   color: #5F6324;
 }
 
-h5 {
+h5, .h5 {
   font-size: 2rem;
   color: #4a5568;
 }
 
-h6 {
+h6, .h6 {
   font-size: 1.6rem;
   text-transform: uppercase;
 }
@@ -1045,7 +1045,10 @@ body:not(.enable-search-modal) .header-titles-wrapper {
 }
 
 .singular .entry-header {
-  padding: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
 }
 
 .entry-header .alignfull {
@@ -1364,6 +1367,7 @@ h2.entry-title {
 
 @media (min-width: 1000px) {
   .entry-content__posts {
+    margin-top: 8rem;
     width: calc(100% - 8rem) !important;
   }
 }
@@ -1742,13 +1746,17 @@ input[type=submit] {
   min-height: 150px;
 }
 
-.wp-block-cover.is-style-page-title h1 {
+.wp-block-cover.is-style-page-title h1,
+  .wp-block-cover.is-style-page-title .page-title {
   color: #5F6324;
   font-weight: 400;
   position: relative;
+  line-height: 1.25;
+  letter-spacing: -0.05em;
 }
 
-.wp-block-cover.is-style-page-title h1:after {
+.wp-block-cover.is-style-page-title h1:after,
+    .wp-block-cover.is-style-page-title .page-title:after {
   position: absolute;
   height: 0.5rem;
   border-top-width: 2px;

@@ -37,7 +37,7 @@ body:not(.enable-search-modal) .header-titles-wrapper {
 }
 
 .singular .entry-header {
-  @apply p-0;
+  @apply px-4 pt-4 pb-16;
 }
 
 .entry-header .alignfull {

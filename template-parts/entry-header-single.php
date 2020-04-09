@@ -17,6 +17,6 @@ if ( is_singular() ) {
 
 <header class="entry-header has-text-align-center<?php echo esc_attr( $entry_header_classes ); ?>">
     
-    <h2><?php the_title(); ?></h2>
+    <h1><?php the_title(); ?></h1>
     
 </header><!-- .entry-header -->

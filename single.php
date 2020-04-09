@@ -13,7 +13,6 @@ get_header();
 ?>
 <main id="site-content" role="main">
     <div class="post-inner">
-	    <div class="entry-content">
 		    <?php
 		
 		    $page_title = 'Neighborhood <strong>News</strong>';
@@ -35,7 +34,6 @@ get_header();
 			}
 			
 			?>
-	    </div>
     </div>
 </main><!-- #site-content -->
 
