@@ -22,6 +22,14 @@
       @apply text-white;
     }
   }
+
+  .menu-footer-menu-container .menu {
+    @apply justify-start;
+
+    @screen lg {
+      @apply justify-end;
+    }
+  }
 }
 
 .footer-copyright {
@@ -40,5 +48,26 @@
   .to-the-top {
     grid-column: 3 / 4;
     justify-self: end;
+  }
+}
+.footer-widgets-wrapper {
+  @screen md {
+    @apply flex-col;
+  }
+  @screen lg {
+    @apply flex-row;
+  }
+}
+.footer-widgets {
+  @screen md {
+    @apply w-full;
+  }
+  @screen lg {
+    @apply w-1/2;
+  }
+}
+.footer-widgets + .footer-widgets {
+  @screen md {
+    @apply mt-12;
   }
 }

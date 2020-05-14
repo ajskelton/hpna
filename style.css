@@ -1217,6 +1217,18 @@ ul.primary-menu {
   color: #fff;
 }
 
+.footer-nav-widgets-wrapper .menu-footer-menu-container .menu {
+  -ms-flex-pack: start;
+      justify-content: flex-start;
+}
+
+@media (min-width: 1000px) {
+  .footer-nav-widgets-wrapper .menu-footer-menu-container .menu {
+    -ms-flex-pack: end;
+        justify-content: flex-end;
+  }
+}
+
 .footer-copyright {
   text-align: center;
   font-weight: 400;
@@ -1236,6 +1248,38 @@ ul.primary-menu {
 #site-footer .section-inner .to-the-top {
   grid-column: 3 / 4;
   justify-self: end;
+}
+
+@media (min-width: 700px) {
+  .footer-widgets-wrapper {
+    -ms-flex-direction: column;
+        flex-direction: column;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer-widgets-wrapper {
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+}
+
+@media (min-width: 700px) {
+  .footer-widgets {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer-widgets {
+    width: 50%;
+  }
+}
+
+@media (min-width: 700px) {
+  .footer-widgets + .footer-widgets {
+    margin-top: 3rem;
+  }
 }
 
 .entry-content .has-larger-font-size {
