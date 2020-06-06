@@ -10,7 +10,7 @@ function twenty_twenty_child_enqueue_styles() {
     wp_enqueue_style( 'child-style',
         get_stylesheet_directory_uri() . '/style.css',
         array('parent-style'),
-        '20200514-0817'
+        '20200606-1505'
     );
 }
 /*

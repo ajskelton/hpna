@@ -27,7 +27,7 @@ if ( has_post_thumbnail() && ! post_password_required() ) {
 
 		<div class="featured-media-inner section-inner<?php echo $featured_media_inner_classes; //phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- static output ?>">
 
-            <a href="<?php echo esc_url( $link ); ?>" target="_blank">
+            <a href="<?php echo esc_url( $link ); ?>">
 			<?php
 			the_post_thumbnail();
 

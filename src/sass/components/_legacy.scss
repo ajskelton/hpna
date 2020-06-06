@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.post-inner *:first-child {
+  margin-top: 0 !important;
+}
+
 .wp-block-cover {
   /*margin: 0;*/
 }

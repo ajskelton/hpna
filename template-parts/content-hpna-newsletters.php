@@ -1,6 +1,6 @@
 <?php
 /**
- * The default template for displaying content
+ * The template for displaying Newsletters
  *
  * Used for both singular and index.
  *
@@ -32,15 +32,10 @@
 	<div class="post-inner">
 
 		<div class="entry-content<?php echo !is_single() ? '__post' : '' ?>">
-
+   
 			<?php
-			$categories = get_the_category_slugs();
-			
-			if ( ! is_singular()  ) {
-				the_excerpt();
-			} else {
-				the_content( __( 'Continue reading', 'twentytwenty' ) );
-			}
+			$newsletter = get_field( 'newsletter' );
+			echo sprintf( '<a href="%s" target="_blank">%s</a>', esc_url( $newsletter['url'] ), __( 'Download the Newsletter', 'twentytwenty' ) );
 			?>
 
 		</div><!-- .entry-content -->
@@ -48,14 +43,7 @@
 	</div><!-- .post-inner -->
 
 	<div class="section-inner">
-		<?php
-
-		edit_post_link();
-
-		// Single bottom post meta.
-		//twentytwenty_the_post_meta( get_the_ID(), 'single-bottom' );
-		
-		?>
+		<?php edit_post_link(); ?>
         <div class="post-meta-wrapper post-meta-single post-meta-single-bottom">
             <ul class="post-meta">
                 <?php if ( has_category() ) : ?>
