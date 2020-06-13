@@ -62,3 +62,19 @@ function hpna_read_more_link( $more_link_element, $more_link_text ) {
 	return sprintf( '<a class="more-link" href="%s">Read More ...</a>', get_the_permalink() );
 }
 add_filter( 'the_content_more_link', 'hpna_read_more_link', 11, 2 );
+
+function hpna_google_analytics() {
+	?>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169300157-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-169300157-1');
+	</script>
+	
+	<?php
+}
+add_action( 'wp_head', 'hpna_google_analytics', -1 );
