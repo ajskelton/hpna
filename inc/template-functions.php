@@ -130,3 +130,32 @@ function hpna_custom_titles( $title, $id ) {
 	return $title;
 	
 }
+
+/**
+ * Returns the times for an HPNA Event Post
+ *
+ * If no times provided, nothing returned. If only a start time
+ * just that is returned. If only an end time, something is wrong and
+ * return nothing. If both return the full start and end time string. 
+ *
+ * @param $start_time
+ * @param $end_time
+ *
+ * @return string
+ */
+function hpna_event_times( $start_time, $end_time ) {
+	
+	if ( !$start_time && !$end_time ) {
+		return '';
+	}
+	
+	if ( $start_time && !$end_time ) {
+		return " | $start_time";
+	}
+	
+	if ( !$start_time && $end_time ) {
+		return '';
+	}
+	
+	return " | $start_time &ndash; $end_time";
+}
