@@ -4,6 +4,8 @@
         $page_title = get_the_archive_title();
     } else if ( is_search() ) {
         $page_title = '<strong>Search for:</strong> ' . get_search_query();
+    } else if ( 'hpna-events' === get_post_type() ) {
+        $page_title = 'Upcoming <strong>Events</strong>';
     }
 ?>
 
