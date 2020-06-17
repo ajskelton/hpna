@@ -40,7 +40,7 @@ function hpna_events_pre_get_posts( $query ) {
 		return $query;
 	}
 	
-	if ( isset( $query->query_vars['post_type'] ) && $query->query_vars['post_type'] === 'hpna-events' && $query->is_main_query() ) {
+	if ( isset( $query->query_vars['post_type'] ) && $query->query_vars['post_type'] === 'hpna-events' && $query->is_main_query() && is_archive() ) {
 		
 		$date = new DateTime();
 		date_add( $date, date_interval_create_from_date_string( '-1 day' ) );
