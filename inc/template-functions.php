@@ -28,6 +28,8 @@ add_action( 'pre_get_posts', 'hpna_events_pre_get_posts' );
  *
  * Shows future events in chronological order
  *
+ * Allows the event to stay up one day past the start time
+ *
  * @param $query
  *
  * @return mixed
@@ -38,18 +40,20 @@ function hpna_events_pre_get_posts( $query ) {
 		return $query;
 	}
 	
-	if ( isset( $query->query_vars['post_type']) && $query->query_vars['post_type'] === 'hpna-events' && $query->is_main_query() ) {
+	if ( isset( $query->query_vars['post_type'] ) && $query->query_vars['post_type'] === 'hpna-events' && $query->is_main_query() ) {
 		
-		$query->set('orderby', 'meta_value');
-		$query->set('order', 'ASC');
+		$date = new DateTime();
+		date_add( $date, date_interval_create_from_date_string( '-1 day' ) );
+		
+		$query->set( 'orderby', 'meta_value' );
+		$query->set( 'order', 'ASC' );
 		$query->set( 'meta_query', array(
 			array(
-				'key' => 'date',
-				'value' => date('Ymd'),
+				'key'     => 'date',
+				'value'   => $date->format( 'Ymd' ),
 				'compare' => '>='
 			)
-		));
-		
+		) );
 	}
 	
 	return $query;
