@@ -80,8 +80,8 @@ function hpna_build_news_feed( WP_Query $query ) {
 	) {
 		$query->set( 'post_type', array(
 			'post',
-			'hpna-meeting-minutes',
-			'hpna-money-reports',
+//			'hpna-meeting-minutes',
+//			'hpna-money-reports',
 			'hpna-newsletters'
 		));
 	}
@@ -89,16 +89,16 @@ function hpna_build_news_feed( WP_Query $query ) {
 
 add_filter('getarchives_where', 'hpna_custom_getarchives_where' );
 function hpna_custom_getarchives_where( $where ) {
-	$where = str_replace( "post_type = 'post'", "post_type IN ( 'post', 'hpna-meeting-minutes', 'hpna-money-reports', 'hpna-newsletters' )", $where );
+	$where = str_replace( "post_type = 'post'", "post_type IN ( 'post', 'hpna-newsletters' )", $where );
 	return $where;
 }
 
-add_action( 'get_previous_post_where', 'hpna_news_navigation', 20 );
-add_action( 'get_next_post_where', 'hpna_news_navigation', 20 );
+//add_action( 'get_previous_post_where', 'hpna_news_navigation', 20 );
+//add_action( 'get_next_post_where', 'hpna_news_navigation', 20 );
 function hpna_news_navigation( $where ) {
 	$return = str_replace(
-		array( "p.post_type = 'post'", "p.post_type = 'hpna-meeting-minutes'", "p.post_type = 'hpna-money-reports'", "p.post_type = 'hpna-newsletters'" ),
-		"(p.post_type = 'post' OR p.post_type = 'hpna-meeting-minutes' OR p.post_type = 'hpna-money-reports' OR p.post_type = 'hpna-newsletters')",
+		array( "p.post_type = 'post'", "p.post_type = 'hpna-newsletters'" ),
+		"(p.post_type = 'post' OR p.post_type = 'hpna-newsletters')",
 		$where
 	);
 	return $return;

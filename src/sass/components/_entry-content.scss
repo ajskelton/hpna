@@ -116,10 +116,11 @@ h2.entry-title {
 
   .post-meta-wrapper {
     margin: 2rem 0 0 0;
+    max-width: none;
   }
 
   .post-meta {
-    margin: 0;
+    @apply m-0 justify-start;
 
     li {
       @apply mt-0 mr-4 mb-4 ml-0 pr-4 border-solid border-0 border-r border-grayDark;
@@ -153,6 +154,20 @@ h2.entry-title {
     @screen md {
       margin: 0;
       max-width: none;
+    }
+  }
+}
+
+.post-meta {
+  @apply justify-center flex-col;
+
+  @screen lg {
+    @apply flex-row;
+  }
+
+  li {
+    @screen lg {
+      @apply mt-0;
     }
   }
 }

@@ -37,7 +37,14 @@ body:not(.enable-search-modal) .header-titles-wrapper {
 }
 
 .singular .entry-header {
-  @apply px-4 pt-4 pb-16;
+  @apply px-4 pt-4 pb-16 mx-auto;
+  width: calc( 100% - 4rem );
+  max-width: 56rem;
+
+  @screen lg {
+    width: calc( 100% - 8rem );
+    max-width: 96rem;
+  }
 }
 
 .entry-header .alignfull {

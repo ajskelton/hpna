@@ -62,6 +62,40 @@ get_header();
 				?>
 				
 				<?php get_template_part( 'template-parts/pagination' ); ?>
+<!--                -->
+<!--                <h2 class="has-text-align-center">Past Events</h2>-->
+<!--                -->
+<!--                --><?php
+//                $i = 0;
+//                $date = new DateTime();
+//                date_add( $date, date_interval_create_from_date_string( '-1 day' ) );
+//
+//                $past_events_args = array(
+//                    'post_type' => 'hpna-events',
+//                    'meta_query' => array(
+//                        array(
+//                            'key' => 'date',
+//                            'value' => $date->format('Ymd'),
+//                            'compare' => '<'
+//                        )
+//                    )
+//                );
+//                $past_events_query = new WP_Query( $past_events_args );
+//
+//                if ( $past_events_query->have_posts() ) :
+//                    while ( $past_events_query->have_posts() ) : $past_events_query->the_post();
+//
+//	                    $i ++;
+//	                    if ( $i > 1 ) {
+//		                    echo '<hr class="wp-block-separator is-style-wide" aria-hidden="true" />';
+//	                    }
+//	                    get_template_part( 'template-parts/content', get_post_type() );
+//
+//                    endwhile;
+//                endif;
+//
+//                wp_reset_postdata();
+                ?>
             </div>
         </div>
     </main><!-- #site-content -->

@@ -30,13 +30,15 @@ function hpna_improved_excerpt_trim( $text ) {
 	$text = apply_filters('the_content', $text);
 	$text = str_replace('\]\]\>', ']]&gt;', $text);
 	$text = preg_replace('@<script[^>]*?>.*?</script>@si', '', $text);
-	$text = strip_tags($text, '<p>');
+	$text = strip_tags($text, '<p><ul><li>' );
+	$read_more_link = " <a href='".get_permalink(get_the_id())."'>Read More</a>";
 	$excerpt_length = 40;
 	$words = explode(' ', $text, $excerpt_length + 1);
 	if (count($words)> $excerpt_length) {
 		array_pop($words);
-		array_push($words, '[...]');
-		$text = implode(' ', $words);
+		$words[] = '...';
+		$words[] = $read_more_link;
+		$text    = implode(' ', $words);
 	}
 	return $text;
 }

@@ -35,7 +35,7 @@ $location = get_field( 'location' );
 			
 			<div class="entry-content_event-text-wrapper">
 				<div class="entry-content__event-text">
-					<h2 class="mt-0 lg:mt-0"><?php the_title(); ?></h2>
+                    <h2 class="mt-0 lg:mt-0"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 					<p class="mt-0"><?php echo $date->format( 'l, F j' ); ?> <?php echo hpna_event_times( $start_time, $end_time ); ?>
 					<p class="location"><?php echo esc_html( $location ); ?></p>
 					<?php the_content(); ?>

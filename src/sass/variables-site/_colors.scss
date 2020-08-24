@@ -19,10 +19,10 @@ $colors: ( green, $green ),
   }
 
   .has-#{$name}-background-color {
-    background-color: $color;
+    background-color: $color !important;
 
     &.has-background-dim.is-style-page-title {
-      background-color: rgba( $color, 0.2 );
+      background-color: rgba( $color, 0.2 ) !important;
     }
   }
 }
