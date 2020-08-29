@@ -10,6 +10,6 @@
  */
 
 
+$page_title = '<strong>Archives:</strong> Financial Reports';
 
 include('single-custom.php');
-

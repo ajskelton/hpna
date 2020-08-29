@@ -9,7 +9,6 @@
  * @since 1.0.0
  */
 
-
+$page_title = '<strong>Archives:</strong> Meeting Minutes';
 
 include('single-custom.php');
-

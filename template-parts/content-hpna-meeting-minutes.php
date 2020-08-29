@@ -38,11 +38,16 @@
 		<div class="entry-content<?php echo !is_single() ? '__post' : '' ?>">
 
 			<?php
-			$categories = get_the_category_slugs();
-			
 			the_content( __( 'Read More &#187;', 'twentytwenty' ) );
-
+			
+			$minutes = get_field( 'minutes' );
+			
+			if ( $minutes && isset( $minutes['url'] ) ) :
 			?>
+            <div class="wp-block-buttons mt-8">
+                <div class="wp-block-button"><a class="wp-block-button__link has-green-background-color has-background" href="<?php echo esc_url( $minutes['url'] ); ?>" target="_blank" rel="noreferrer noopener">Download the Minutes</a></div>
+            </div>
+            <?php endif; ?>
 
 		</div><!-- .entry-content -->
 
@@ -53,28 +58,7 @@
 
 		edit_post_link();
 
-		// Single bottom post meta.
-		//twentytwenty_the_post_meta( get_the_ID(), 'single-bottom' );
-		
 		?>
-        <div class="post-meta-wrapper post-meta-single post-meta-single-bottom">
-            <ul class="post-meta">
-                <?php if ( has_category() ) : ?>
-                <li class="post-categories meta-wrapper">
-                    <span class="meta-text">
-							<?php _ex( 'Posted in', 'A string that is output before one or more categories', 'twentytwenty' ); ?> <?php the_category( ', ' ); ?>
-						</span>
-                </li>
-                <?php endif; ?>
-                <?php if ( has_tag() ) : ?>
-                <li class="post-tags meta-wrapper">
-                    <span class="meta-text">
-							<?php the_tags( 'Tagged ', ', ', '' ); ?>
-						</span>
-                </li>
-                <?php endif; ?>
-            </ul>
-        </div>
 
 	</div><!-- .section-inner -->
 

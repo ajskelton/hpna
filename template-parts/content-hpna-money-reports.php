@@ -39,7 +39,9 @@
 
 			<?php $report = get_field( 'financial_report' ); ?>
             <?php if ( $report ) : ?>
-                <a href="<?php echo esc_url( $report['url'] ); ?>">Download the Financial Report</a>
+                <div class="wp-block-buttons">
+                    <div class="wp-block-button"><a class="wp-block-button__link has-green-background-color has-background" href="<?php echo esc_url( $report['url'] ); ?>" target="_blank" rel="noreferrer noopener">Download the Financial Report</a></div>
+                </div>
             <?php endif; ?>
             
 		</div><!-- .entry-content -->

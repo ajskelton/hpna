@@ -16,9 +16,9 @@ get_header();
         <div class="entry-content">
             <?php
 
-            $page_title = 'Neighborhood <strong>News</strong>';
             
-            include_once( 'template-parts/content-page-header.php' );
+
+            get_template_part( 'template-parts/content', 'page-header', array( 'page_title' => $page_title ) );
             
             ?>
             

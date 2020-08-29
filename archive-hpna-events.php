@@ -23,14 +23,17 @@ get_header();
 				
 				<?php
 				
-				$page_title = 'Upcoming <strong>Events</strong>';
+				$page_title = 'HPNA <strong>Events</strong>';
 				
-				include_once( 'template-parts/content-page-header.php' );
+				get_template_part( 'template-parts/content', 'page-header', array( 'page_title' => $page_title ) );
 				
+				get_template_part( 'template-parts/events', 'ongoing' );
 				
 				if ( have_posts() ) {
 					
 					$i = 0;
+					
+					echo '<h2 class="text-center">Upcoming Events</h2>';
 					
 					while ( have_posts() ) {
 						$i ++;
@@ -42,60 +45,13 @@ get_header();
 						get_template_part( 'template-parts/content', get_post_type() );
 						
 					}
-				} elseif ( is_search() ) {
-					?>
-
-                    <div class="no-search-results-form section-inner thin">
-						
-						<?php
-						get_search_form(
-							array(
-								'label' => __( 'search again', 'twentytwenty' ),
-							)
-						);
-						?>
-
-                    </div><!-- .no-search-results -->
-					
-					<?php
 				}
 				?>
 				
 				<?php get_template_part( 'template-parts/pagination' ); ?>
-<!--                -->
-<!--                <h2 class="has-text-align-center">Past Events</h2>-->
-<!--                -->
-<!--                --><?php
-//                $i = 0;
-//                $date = new DateTime();
-//                date_add( $date, date_interval_create_from_date_string( '-1 day' ) );
-//
-//                $past_events_args = array(
-//                    'post_type' => 'hpna-events',
-//                    'meta_query' => array(
-//                        array(
-//                            'key' => 'date',
-//                            'value' => $date->format('Ymd'),
-//                            'compare' => '<'
-//                        )
-//                    )
-//                );
-//                $past_events_query = new WP_Query( $past_events_args );
-//
-//                if ( $past_events_query->have_posts() ) :
-//                    while ( $past_events_query->have_posts() ) : $past_events_query->the_post();
-//
-//	                    $i ++;
-//	                    if ( $i > 1 ) {
-//		                    echo '<hr class="wp-block-separator is-style-wide" aria-hidden="true" />';
-//	                    }
-//	                    get_template_part( 'template-parts/content', get_post_type() );
-//
-//                    endwhile;
-//                endif;
-//
-//                wp_reset_postdata();
-                ?>
+                
+                <?php get_template_part( 'template-parts/events', 'past' ); ?>
+                
             </div>
         </div>
     </main><!-- #site-content -->
