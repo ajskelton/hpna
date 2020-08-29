@@ -9,7 +9,4 @@
  * @since 1.0.0
  */
 
-
-
 include('single-custom.php');
-

@@ -48,10 +48,16 @@ function hpna_events_pre_get_posts( $query ) {
 		$query->set( 'orderby', 'meta_value' );
 		$query->set( 'order', 'ASC' );
 		$query->set( 'meta_query', array(
+			'relationship' => 'AND',
 			array(
 				'key'     => 'date',
 				'value'   => $date->format( 'Ymd' ),
 				'compare' => '>='
+			),
+			array(
+				'key' => 'event_type',
+				'value' => 'ongoing',
+				'compare' => '!='
 			)
 		) );
 	}
