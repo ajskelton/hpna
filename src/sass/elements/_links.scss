@@ -2,8 +2,7 @@ a {
   @apply text-green;
 
   &:hover,
-  &:focus,
-  &:visited {
+  &:focus {
     @apply text-olive;
   }
 }
