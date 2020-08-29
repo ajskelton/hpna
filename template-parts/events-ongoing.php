@@ -10,7 +10,7 @@ $query_args = array(
 			'compare' => '='
 		),
 		array(
-			'key' => 'end_date',
+			'key' => 'date',
 			'value' => date('Ymd'),
 			'type' => 'DATE',
 			'compare' => '>='
