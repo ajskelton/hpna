@@ -31,6 +31,8 @@ function hpna_block_editor_styles() {
 add_action( 'enqueue_block_editor_assets', 'hpna_block_editor_styles', 2, 1 );
 
 include_once( 'inc/index.php' );
+include_once( 'classes/class-hpna-acf-customizations.php' );
+include_once( 'classes/class-hpna-purple-air.php' );
 
 
 add_action( 'init', 'hpna_remove_parent_actions');

@@ -1,0 +1,43 @@
+{
+    "key": "group_5f556669ac9d8",
+    "title": "Purple Air Info Bar",
+    "fields": [
+        {
+            "key": "field_5f556674e56cc",
+            "label": "Enable Info Bar",
+            "name": "enable_purple_air_info_bar",
+            "type": "true_false",
+            "instructions": "Check box to enable the Purple Air Info bar from Sensor 55501 in NE Hollywood Park",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1599432368
+}

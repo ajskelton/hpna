@@ -1,0 +1,36 @@
+$good: $greenLight;
+$moderate: #fef853;
+$unhealthy_sensitive: #ee6c2e;
+$unhealthy: #bf2836;
+$hazardous: #731425;
+
+.purple-air-bar {
+}
+
+.showing-menu-modal {
+  .purple-air-bar {
+    display: none;
+  }
+}
+
+.bg-good {
+  background-color: $good;
+}
+
+.bg-moderate {
+  background-color: $moderate;
+}
+
+.bg-unhealthy-for-sensitive-groups {
+  background-color: $unhealthy_sensitive;
+}
+
+.bg-unhealthy {
+  background-color: $unhealthy;
+}
+
+.bg-very-unhealthy,
+.bg-hazardous {
+  background-color: $hazardous;
+}
+
