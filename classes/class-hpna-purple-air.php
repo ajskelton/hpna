@@ -62,24 +62,22 @@ if ( ! class_exists( 'HPNA_Purple_Air' ) ) {
                             <p class="text-4xl font-bold  m-0"><?php echo esc_html( $data['aqi_now'] ); ?></p>
                         </div>
                         <div class="aqi-info col-span-4 md:col-span-3 self-center justify-center">
-                            <p class="mb-0 text-base text-center md:text-left">Current AQI
-                                for <?php echo esc_html( $data['sensor_label'] ); ?></p>
-                            <p class="mb-0 text-base text-center md:text-left">Lasted
-                                updated: <?php echo esc_html( $data['timestamp'] ); ?></p>
+                            <p class="mb-0 text-base text-center md:text-left"><?php _e( 'Current AQI for', 'hpna'); ?> <?php echo esc_html( $data['sensor_label'] ); ?></p>
+                            <p class="mb-0 text-base text-center md:text-left"><?php _e( 'Last Updated: ', 'hpna' ); ?> <?php echo esc_html( $data['timestamp'] ); ?></p>
                         </div>
                         <div class="aqi-upcoming-boxes flex col-span-4">
                             <?php foreach ( $data['aqi_future'] as $item ) : ?>
-                            <?php $item_background = $this->get_description_class( $this->get_aqi_description( $item['aqi'] ) ); ?>
-                            <div class="box bg-<?php echo esc_attr( $item_background ); ?> <?php echo esc_attr( $this->get_text_color( $item_background ) ) ?> flex flex-col w-1/4 text-center justify-center align-center p-2 md:p-4">
-                                <p class="mb-0 text-xl font-bold"><?php echo esc_html( $item['aqi'] ); ?></p>
-                                <p class="mb-0 text-base"><?php echo esc_html( $item['label'] ) ?></p>
-                            </div>
+                                <?php $item_background = $this->get_description_class( $this->get_aqi_description( $item['aqi'] ) ); ?>
+                                <div class="box bg-<?php echo esc_attr( $item_background ); ?> <?php echo esc_attr( $this->get_text_color( $item_background ) ) ?> flex flex-col w-1/4 text-center justify-center align-center p-2 md:p-4">
+                                    <p class="mb-0 text-xl font-bold"><?php echo esc_html( $item['aqi'] ); ?></p>
+                                    <p class="mb-0 text-base"><?php echo esc_html( $item['label'] ) ?></p>
+                                </div>
                             <?php endforeach; ?>
                         </div>
                         <div class="aqi-link flex items-center justify-center col-span-4 lg:col-span-2">
-                            <p class="mb-0">
+                            <p class="lg:mb-0">
                                 <a class="<?php echo esc_attr( $this->get_text_color( $main_description ) ) ?> hover:<?php echo esc_attr( $this->get_text_color( $main_description ) ) ?>" href="https://www.purpleair.com/map?opt=1/mAQI/a10/cC0&key=ALX7WIYHAGN9ST7D&select=55501#14/38.53291/-121.48399"
-                                   target="_blank">See full sensor data</a></p>
+                                   target="_blank"><?php _e( 'See full sensor data', 'hpna' ); ?></a></p>
                         </div>
                     </div>
                 </div>
