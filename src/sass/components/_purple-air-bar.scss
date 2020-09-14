@@ -34,3 +34,24 @@ $hazardous: #731425;
   background-color: $hazardous;
 }
 
+.aqi-mobile-see-more {
+  @apply absolute text-base bg-transparent;
+  top: 1rem;
+  right: 1rem;
+
+  @screen lg {
+    @apply hidden;
+  }
+}
+
+.aqi-hide {
+  @apply hidden h-0 overflow-hidden;
+
+  @screen lg {
+    @apply h-auto;
+  }
+
+  &.aqi-reveal {
+    @apply h-auto;
+  }
+}

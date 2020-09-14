@@ -55,7 +55,8 @@ if ( ! class_exists( 'HPNA_Purple_Air' ) ) {
 			ob_start();
 			?>
             <div class="purple-air-bar">
-                <?php $main_description = $this->get_description_class( $data['aqi_description'] ) ?>
+	            <?php $main_description = $this->get_description_class( $data['aqi_description'] ) ?>
+                <button class="aqi-mobile-see-more <?php echo esc_attr( $this->get_text_color( $main_description ) ) ?>">See more</button>
                 <div class="bg-<?php echo esc_attr( $main_description ); ?> <?php echo esc_attr( $this->get_text_color( $main_description ) ) ?>">
                     <div class="grid grid-cols-4 lg:grid-cols-10 gap-4 max-w-screen-xl mx-auto">
                         <div class="aqi-current col-span-4 md:col-span-1 flex justify-center items-center">
@@ -65,7 +66,7 @@ if ( ! class_exists( 'HPNA_Purple_Air' ) ) {
                             <p class="mb-0 text-base text-center md:text-left"><?php _e( 'Current AQI for', 'hpna'); ?> <?php echo esc_html( $data['sensor_label'] ); ?></p>
                             <p class="mb-0 text-base text-center md:text-left"><?php _e( 'Last Updated: ', 'hpna' ); ?> <?php echo esc_html( $data['timestamp'] ); ?></p>
                         </div>
-                        <div class="aqi-upcoming-boxes flex col-span-4">
+                        <div class="aqi-upcoming-boxes flex col-span-4 js-aqi-see-more aqi-hide">
                             <?php foreach ( $data['aqi_future'] as $item ) : ?>
                                 <?php $item_background = $this->get_description_class( $this->get_aqi_description( $item['aqi'] ) ); ?>
                                 <div class="box bg-<?php echo esc_attr( $item_background ); ?> <?php echo esc_attr( $this->get_text_color( $item_background ) ) ?> flex flex-col w-1/4 text-center justify-center align-center p-2 md:p-4">
@@ -74,9 +75,9 @@ if ( ! class_exists( 'HPNA_Purple_Air' ) ) {
                                 </div>
                             <?php endforeach; ?>
                         </div>
-                        <div class="aqi-link flex items-center justify-center col-span-4 lg:col-span-2">
+                        <div class="aqi-link flex items-center justify-center col-span-4 lg:col-span-2 js-aqi-see-more aqi-hide">
                             <p class="lg:mb-0">
-                                <a class="<?php echo esc_attr( $this->get_text_color( $main_description ) ) ?> hover:<?php echo esc_attr( $this->get_text_color( $main_description ) ) ?>" href="https://www.purpleair.com/map?opt=1/mAQI/a10/cC0&key=ALX7WIYHAGN9ST7D&select=55501#14/38.53291/-121.48399"
+                                <a class="<?php echo esc_attr( $this->get_text_color( $main_description ) ) ?> hover:<?php echo esc_attr( $this->get_text_color( $main_description ) ) ?> underline" href="https://www.purpleair.com/map?opt=1/mAQI/a10/cC0&key=ALX7WIYHAGN9ST7D&select=55501#14/38.53291/-121.48399"
                                    target="_blank"><?php _e( 'See full sensor data', 'hpna' ); ?></a></p>
                         </div>
                     </div>
@@ -121,7 +122,7 @@ if ( ! class_exists( 'HPNA_Purple_Air' ) ) {
 					),
 					'aqi_360' => array(
 						'aqi'   => $this->get_aqi_from( $stats->v4 ),
-						'label' => __( 'in 4 hr', 'hpna' ),
+						'label' => __( 'in 6 hr', 'hpna' ),
 					)
 				),
 			);
