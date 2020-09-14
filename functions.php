@@ -10,8 +10,9 @@ function twenty_twenty_child_enqueue_styles() {
     wp_enqueue_style( 'child-style',
         get_stylesheet_directory_uri() . '/style.css',
         array('parent-style'),
-        '20200829-1344'
+        '20200914-0813'
     );
+    wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/dist/app.js', '', '20200914-0744', true );
 }
 /*
  * Your code goes below
@@ -31,6 +32,8 @@ function hpna_block_editor_styles() {
 add_action( 'enqueue_block_editor_assets', 'hpna_block_editor_styles', 2, 1 );
 
 include_once( 'inc/index.php' );
+include_once( 'classes/class-hpna-acf-customizations.php' );
+include_once( 'classes/class-hpna-purple-air.php' );
 
 
 add_action( 'init', 'hpna_remove_parent_actions');

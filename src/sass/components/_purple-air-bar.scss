@@ -1,0 +1,57 @@
+$good: $greenLight;
+$moderate: #fef853;
+$unhealthy_sensitive: #ee6c2e;
+$unhealthy: #bf2836;
+$hazardous: #731425;
+
+.purple-air-bar {
+}
+
+.showing-menu-modal {
+  .purple-air-bar {
+    display: none;
+  }
+}
+
+.bg-good {
+  background-color: $good;
+}
+
+.bg-moderate {
+  background-color: $moderate;
+}
+
+.bg-unhealthy-for-sensitive-groups {
+  background-color: $unhealthy_sensitive;
+}
+
+.bg-unhealthy {
+  background-color: $unhealthy;
+}
+
+.bg-very-unhealthy,
+.bg-hazardous {
+  background-color: $hazardous;
+}
+
+.aqi-mobile-see-more {
+  @apply absolute text-base bg-transparent;
+  top: 1rem;
+  right: 1rem;
+
+  @screen lg {
+    @apply hidden;
+  }
+}
+
+.aqi-hide {
+  @apply hidden h-0 overflow-hidden;
+
+  @screen lg {
+    @apply h-auto;
+  }
+
+  &.aqi-reveal {
+    @apply h-auto;
+  }
+}

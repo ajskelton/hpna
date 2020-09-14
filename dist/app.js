@@ -92,6 +92,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_style_scss__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _js_components_purple_air_bar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
+/* harmony import */ var _js_components_purple_air_bar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_components_purple_air_bar__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 /***/ }),
@@ -99,6 +102,37 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+/**
+ * Purple Air Reveal
+ *
+ * Button that opens the full Purple Air bar for mobile
+ */
+function purpleAirReveal() {
+
+	const button = document.querySelector('.aqi-mobile-see-more'),
+		  sections = document.querySelectorAll('.js-aqi-see-more' );
+
+	button.addEventListener( 'click', toggleReveal );
+
+	function toggleReveal() {
+
+		sections.forEach( function ( section ) {
+			section.classList.toggle('aqi-reveal');
+		})
+
+		if ( button.innerHTML === 'See more' ) {
+			button.innerHTML = 'See less';
+		} else {
+			button.innerHTML = 'See more';
+		}
+	}
+}
+purpleAirReveal();
 
 /***/ })
 /******/ ]);

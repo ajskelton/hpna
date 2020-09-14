@@ -80,3 +80,16 @@ function hpna_google_analytics() {
 	<?php
 }
 add_action( 'wp_head', 'hpna_google_analytics', -1 );
+
+function hpna_purple_air() {
+    
+    $enable = get_field( 'enable_purple_air_info_bar', 'options' );
+    
+    if ( !$enable ) {
+        return;
+    }
+    
+    $purple_air = new HPNA_Purple_Air();
+    echo $purple_air->render_info_bar();
+}
+add_action( 'wp_body_open', 'hpna_purple_air' );
