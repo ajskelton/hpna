@@ -7,9 +7,9 @@ $link = get_field( 'link' );
 
 <div class="c-card c-card--cta">
     <a class="c-card__wrapper" href="<?php echo esc_url( $link['url'] ); ?>">
-        <div class="c-card__top">
-            <div class="fa-5x text-green">
-                <i class="fad fa-<?php echo esc_attr( $icon ) ?>"></i>
+        <div class="c-card__top flex item-center justify-center">
+            <div class="w-64">
+	            <?php echo hpna_load_inline_svg( $icon . '.svg' ) ?>
             </div>
         </div>
         <div class="c-card__bottom">

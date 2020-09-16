@@ -169,3 +169,22 @@ function hpna_event_times( $start_time, $end_time ) {
 	
 	return " | $start_time &ndash; $end_time";
 }
+
+/**
+ * Loads an inline svg file from the template directory
+ *
+ * @param $filename
+ *
+ * @return string
+ */
+function hpna_load_inline_svg( $filename ) {
+	
+	// The Path to the SVG Directory inside the theme
+	$svg_path = '/src/images/svg/';
+//	dump_and_die(get_stylesheet_directory() . $svg_path . $filename);
+	if ( file_exists( get_stylesheet_directory() . $svg_path . $filename ) ) {
+		return file_get_contents( get_stylesheet_directory() . $svg_path . $filename );
+	}
+	
+	return '';
+}
