@@ -77,7 +77,7 @@ if ( ! class_exists( 'HPNA_Purple_Air' ) ) {
                         </div>
                         <div class="aqi-link flex items-center justify-center col-span-4 lg:col-span-2 js-aqi-see-more aqi-hide">
                             <p class="lg:mb-0">
-                                <a class="<?php echo esc_attr( $this->get_text_color( $main_description ) ) ?> hover:<?php echo esc_attr( $this->get_text_color( $main_description ) ) ?> underline" href="https://www.purpleair.com/map?opt=1/mAQI/a10/cC0&key=ALX7WIYHAGN9ST7D&select=55501#14/38.53291/-121.48399"
+                                <a class="<?php echo esc_attr( $this->get_text_color( $main_description ) ) ?> hover:<?php echo esc_attr( $this->get_text_color( $main_description ) ) ?> underline" href="https://www.purpleair.com/map?opt=1/mAQI/a10/cC0&key=ALX7WIYHAGN9ST7D&select=63483#14/38.53227/-121.48545"
                                    target="_blank"><?php _e( 'See full sensor data', 'hpna' ); ?></a></p>
                         </div>
                     </div>
