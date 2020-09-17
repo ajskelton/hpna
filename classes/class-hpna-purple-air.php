@@ -14,7 +14,7 @@ if ( ! class_exists( 'HPNA_Purple_Air' ) ) {
 		
 		protected $feed;
 		protected $key = 'ALX7WIYHAGN9ST7D';
-		protected $sensor_id = '55501';
+		protected $sensor_id = '63483';
 		
 		public function __construct() {
 			$this->feed = $this->get_feed();
@@ -63,7 +63,7 @@ if ( ! class_exists( 'HPNA_Purple_Air' ) ) {
                             <p class="text-4xl font-bold  m-0"><?php echo esc_html( $data['aqi_now'] ); ?></p>
                         </div>
                         <div class="aqi-info col-span-4 md:col-span-3 self-center justify-center">
-                            <p class="mb-0 text-base text-center md:text-left"><?php _e( 'Current AQI for', 'hpna'); ?> <?php echo esc_html( $data['sensor_label'] ); ?></p>
+                            <p class="mb-0 text-base text-center md:text-left"><?php _e( 'Current AQI in Hollywood Park', 'hpna'); ?></p>
                             <p class="mb-0 text-base text-center md:text-left"><?php _e( 'Last Updated: ', 'hpna' ); ?> <?php echo esc_html( $data['timestamp'] ); ?></p>
                         </div>
                         <div class="aqi-upcoming-boxes flex col-span-4 js-aqi-see-more aqi-hide">
