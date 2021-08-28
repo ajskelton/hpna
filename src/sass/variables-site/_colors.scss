@@ -5,24 +5,28 @@ $orange: #df7706;
 
 // Gutenberg color options
 // -- see editor-color-palette in functions.php
-$colors: ( green, $green ),
-        ( olive, $olive ),
-        ( orange, $orange );
+$colors: (
+  'lightGreen',
+  'green',
+  'olive',
+  'orange',
+  'grayDark'
+);
 
 /* Color Options
 --------------------------------------------- */
 
-@each $name, $color in $colors {
+@each $color in $colors {
 
-  .has-#{$name}-color {
-    color: $color;
+  .has-#{$color}-color {
+    @apply text-#{$color}
   }
 
-  .has-#{$name}-background-color {
-    background-color: $color !important;
+  .has-#{$color}-background-color {
+    @apply bg-#{$color};
 
     &.has-background-dim.is-style-page-title {
-      background-color: rgba( $color, 0.2 ) !important;
+      @apply bg-opacity-20;
     }
   }
 }

@@ -8,11 +8,11 @@ add_action( 'wp_enqueue_scripts', 'twenty_twenty_child_enqueue_styles' );
 function twenty_twenty_child_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'child-style',
-        get_stylesheet_directory_uri() . '/style.css',
+        get_stylesheet_directory_uri() . '/dist/styles/style.css',
         array('parent-style'),
-        '20200914-0813'
+        '20210828-0936'
     );
-    wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/dist/app.js', '', '20200914-0744', true );
+    wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/dist/scripts/index.js', '', '20210828-0936', true );
 }
 /*
  * Your code goes below

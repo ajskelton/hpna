@@ -24,6 +24,7 @@ module.exports = {
 				lightGreen: '#66CC33',
 				green: '#719E40',
 				olive: '#5F6324',
+				orange: '#df7706',
 				grayDark: '#505050',
 			},
 			maxWidth: {
@@ -35,5 +36,11 @@ module.exports = {
 	variants: {
 		visibility: ['group-hover']
 	},
-	plugins: []
+	plugins: [],
+	purge: {
+		content: [
+			'./**/*.php',
+			'./**/*.js'
+		],
+	}
 }

@@ -14,7 +14,7 @@ if ( ! class_exists( 'HPNA_Purple_Air' ) ) {
 		
 		protected $feed;
 		protected $key = 'ALX7WIYHAGN9ST7D';
-		protected $sensor_id = '63483';
+		protected $sensor_id = '55501';
 		
 		public function __construct() {
 			$this->feed = $this->get_feed();
@@ -110,19 +110,19 @@ if ( ! class_exists( 'HPNA_Purple_Air' ) ) {
 				'aqi_future'      => array(
 					'aqi_10'  => array(
 						'aqi'   => $this->get_aqi_from( $stats->v1 ),
-						'label' => __( 'in 10 min', 'hpna' ),
+						'label' => __( '10 min Avg', 'hpna' ),
 					),
 					'aqi_30'  => array(
 						'aqi'   => $this->get_aqi_from( $stats->v2 ),
-						'label' => __( 'in 30 min', 'hpna' ),
+						'label' => __( '30 min Avg', 'hpna' ),
 					),
 					'aqi_60'  => array(
 						'aqi'   => $this->get_aqi_from( $stats->v3 ),
-						'label' => __( 'in 60 min', 'hpna' ),
+						'label' => __( '60 min Avg', 'hpna' ),
 					),
 					'aqi_360' => array(
 						'aqi'   => $this->get_aqi_from( $stats->v4 ),
-						'label' => __( 'in 6 hr', 'hpna' ),
+						'label' => __( '6 hr Avg', 'hpna' ),
 					)
 				),
 			);
