@@ -1,0 +1,17 @@
+{
+    "name": "ajskelton/hpna",
+    "description": "A WordPress Theme for Hollywood Park Neighborhood Association",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Anthony",
+            "email": "anthony@anthonyskelton.com"
+        }
+    ],
+    "require": {
+        "wp-user-manager/wp-optionskit": "^1.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    }
+}

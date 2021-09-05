@@ -36,3 +36,4 @@ nbproject
 
 # build output (optional ignore)
 #dist
+/vendor/
