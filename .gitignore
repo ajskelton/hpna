@@ -49,8 +49,10 @@ wp-content/cache/supercache/*
 /wp-content/index.php
 /wp-content/themes/*
 /wp-content/themes/index.php
+/wp-content/plugins/*
 /wp-content/plugins/index.php
 /wp-content/plugins/akismet*
+/wp-content/mu-plugins/*
 
 # Custom Themes and Plugins
 !/wp-content/themes/hpna
